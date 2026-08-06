@@ -2,24 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const situations = [
 {
-  emoji: '😰',
-  title: 'El Espejo que No Miente',
-  desc: 'Bajás kilos, pero tu piel cuelga y tu cara se ve demacrada. El "rostro hundido" del tratamiento GLP-1 ya apareció.'
-},
-{
-  emoji: '😩',
-  title: 'La Fuerza que Desaparece',
-  desc: 'Subir escaleras te agota. Cargás menos. Estás perdiendo músculo junto con la grasa.'
-},
-{
-  emoji: '⚖️',
-  title: 'El Miedo al Rebote',
-  desc: '¿Qué pasa cuando dejes la inyección? ¿Tu cuerpo va a recuperar todo — y más?'
+  emoji: '🗂️',
+  title: 'Información desordenada',
+  desc: 'Artículos sueltos, videos contradictorios y listas en distintos lados. Cada vez que necesitás orientarte, perdés tiempo y terminás más confundida.'
 },
 {
   emoji: '⏱️',
-  title: 'La Inversión que No Rinde',
-  desc: 'Pagás $200–$400 USD por mes en el fármaco sin obtener el cuerpo atlético que imaginabas.'
+  title: 'Comidas que toman demasiada energía mental',
+  desc: 'Cada salida, cada almuerzo en el trabajo o cada cena en familia se convierte en horas de cálculo y ansiedad anticipatoria.'
+},
+{
+  emoji: '📌',
+  title: 'Síntomas que quedan sin resolver',
+  desc: 'Detectás que algo te cae mal, pero no siempre queda claro cuál fue el alimento, en qué cantidad y cómo evitarlo sin resignar todo.'
+},
+{
+  emoji: '🎯',
+  title: 'Sensación de que nada funciona de verdad',
+  desc: 'Probaste eliminar, restringir, suplementar. Y aun así seguís terminando el día desabrochándote el pantalón por el dolor.'
 }];
 
 export function ProblemSection() {
@@ -31,11 +31,13 @@ export function ProblemSection() {
             ¿Te reconocés en esto?
           </h2>
           <p className="text-xl font-bold text-[#5C6851] mb-4 italic">
-            Bajás de peso... ¿pero a qué costo?
+            Sabés identificar cuándo te inflama algo, pero cada comida es
+            adivinar qué estuvo mal.
           </p>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Si usás Semaglutida, Tirzepatida o cualquier agonista GLP-1,
-            probablemente vivís alguna de estas situaciones:
+            Si tenés SIBO diagnosticado o síntomas compatibles como hinchazón,
+            gases, distensión abdominal o miedo a comer, probablemente ya
+            viviste esto:
           </p>
         </div>
 
