@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Star, ShieldCheck, Zap, CreditCard } from "lucide-react";
 import { scrollToOffer } from "../utils/scrollToOffer";
-import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 export function HeroSection() {
   return (
     <section className="relative md:min-h-[100svh] flex flex-col justify-start md:justify-center overflow-hidden bg-transparent py-6">
@@ -68,7 +67,22 @@ export function HeroSection() {
           }}
           className="mx-auto mb-0 w-full max-w-[400px] sm:max-w-md md:max-w-[836px]"
         >
-          <ProductCoverPlaceholder />
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcSet={`${import.meta.env.BASE_URL}megapack-sibo-mockup.png`}
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
+              alt="Megapack SIBO: El Método Anti-Inflamación"
+              width={1254}
+              height={1254}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto rounded-2xl"
+            />
+          </picture>
         </motion.div>
 
         <motion.div
