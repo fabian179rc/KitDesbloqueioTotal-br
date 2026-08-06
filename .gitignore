@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Unused assets from previous product / unrelated export
+/b1.webp
+/b2.webp
+/b3.webp
+/b4.webp
+/b5.webp
+/mockup.webp
+/mockup-web.webp
+/webacopiar
+/public/checklist-2
+
+# Raw source drops already copied into public/ under their final names
+/bon1.webp
+/bon2.webp
+/bon3.webp
+/bon4.webp
+/bon5.webp
+/mockup-web.png
+/Mockup-mobile.png
+/mockup-web2.png
+/Mockup-mobile1.png
