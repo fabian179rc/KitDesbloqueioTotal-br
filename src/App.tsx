@@ -36,6 +36,9 @@ function addLink(
   Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
   document.head.appendChild(el);
 }
+function absoluteUrl(path: string): string {
+  return new URL(path, SITE_URL).href;
+}
 export function App() {
   useScreenInit();
   useEffect(() => {
@@ -72,7 +75,7 @@ export function App() {
     setMeta("property", "og:title", PAGE_TITLE);
     setMeta("property", "og:description", PAGE_DESC);
     setMeta("property", "og:locale", "es_LA");
-    setMeta("property", "og:image", HERO_IMAGE);
+    setMeta("property", "og:image", absoluteUrl(HERO_IMAGE));
     setMeta("property", "og:url", SITE_URL);
     setMeta(
       "property",
@@ -80,7 +83,7 @@ export function App() {
       "Megapack SIBO",
     );
     setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:image", HERO_IMAGE);
+    setMeta("name", "twitter:image", absoluteUrl(HERO_IMAGE));
     setMeta("name", "twitter:title", PAGE_TITLE);
     setMeta("name", "twitter:description", PAGE_DESC);
     const ldId = "ld-product-schema";
@@ -93,7 +96,7 @@ export function App() {
         "@type": "Product",
         name: "Megapack SIBO: El Método Anti-Inflamación",
         description: PAGE_DESC,
-        image: HERO_IMAGE,
+        image: absoluteUrl(HERO_IMAGE),
         brand: {
           "@type": "Brand",
           name: "Megapack SIBO",
@@ -156,7 +159,7 @@ export function App() {
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined")
       return;
-    // Solo se carga el Meta Pixel real (3505657626270665).
+    // Sin Meta Pixel configurado todavía (META_PIXEL_ID vacío = no-op).
     if (!META_PIXEL_ID) return;
     const loadPixel = () => {
       const w = window as any;

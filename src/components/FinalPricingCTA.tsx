@@ -32,7 +32,7 @@ export function FinalPricingCTA() {
             🎁 Kit Completo Megapack SIBO: El Método Anti-Inflamación + 5
             Bonos Incluidos
           </h3>
-          <div className="text-slate-500 line-through mb-2">$59.500 ARS</div>
+          <div className="text-slate-500 line-through mb-2">$99.950 ARS</div>
           <div className="text-4xl font-bold text-[#B85C43] mb-6">
             $19.990 ARS
           </div>

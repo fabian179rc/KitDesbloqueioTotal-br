@@ -77,6 +77,8 @@ export function PricingSection() {
             <source
               media="(min-width: 768px)"
               srcSet={`${import.meta.env.BASE_URL}megapack-sibo-mockup.png`}
+              width={1536}
+              height={1024}
             />
             <img
               src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
@@ -113,7 +115,7 @@ export function PricingSection() {
       >
         <div className="bg-white rounded-3xl shadow-2xl shadow-black/10 p-7 md:p-8 text-center">
           <div className="text-slate-500 text-base md:text-lg mb-3">
-            Precio Normal: <span className="line-through">$59.500 ARS</span>
+            Precio Normal: <span className="line-through">$99.950 ARS</span>
           </div>
 
           <div className="inline-flex items-center gap-2 bg-[#F3E3C3] text-[#9C5330] font-bold px-5 py-2.5 rounded-full text-sm mb-5">
@@ -121,7 +123,7 @@ export function PricingSection() {
           </div>
 
           <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
-            $19.990
+            $19.990 ARS
           </div>
           <span className="inline-block bg-slate-100 text-slate-700 text-sm font-medium px-4 py-1.5 rounded-full mb-5">
             Pagás en un solo pago, accedés de forma inmediata

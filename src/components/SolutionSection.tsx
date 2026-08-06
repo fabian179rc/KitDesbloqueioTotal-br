@@ -37,6 +37,8 @@ export function SolutionSection() {
             <source
               media="(min-width: 768px)"
               srcSet={`${import.meta.env.BASE_URL}megapack-sibo-mockup.png`}
+              width={1536}
+              height={1024}
             />
             <img
               src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
