@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Star, ShieldCheck, Zap, CreditCard } from "lucide-react";
+import { ArrowRight, Globe, ShieldCheck, Zap, CreditCard } from "lucide-react";
 import { getCheckoutUrl } from "../utils/checkoutUrl";
 export function FinalPricingCTA() {
   return (
@@ -18,23 +18,24 @@ export function FinalPricingCTA() {
           </span>
         </div>
         <h2 className="text-3xl md:text-5xl font-bold font-heading text-[#2f3a2c] mb-5 leading-tight">
-          Tu transformación merece terminar con un cuerpo{" "}
-          <span className="text-[#B85C43]">
-            firme, atlético y un metabolismo blindado
-          </span>
+          Más claridad, más orden y{" "}
+          <span className="text-[#B85C43]">menos ansiedad en cada comida</span>
           .
         </h2>
         <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-          El sistema completo. Más resultados reales y menos dinero perdido
-          en protocolos mal armados.
+          Dejá de armar cada semana desde cero: el Megapack te da el sistema
+          para lograrlo.
         </p>
 
         <div className="bg-white border border-amber-100 rounded-3xl p-6 md:p-7 shadow-lg shadow-black/5 max-w-xl mx-auto mb-6">
           <h3 className="font-bold text-[#2f3a2c] mb-2 text-lg md:text-xl">
-            Kit Completo: Protocolo GLP-1 Sin Rebote + 5 Bonos GRATIS
+            🎁 Kit Completo Megapack SIBO: El Método Anti-Inflamación + 5
+            Bonos Incluidos
           </h3>
-          <div className="text-slate-500 line-through mb-2">USD 97</div>
-          <div className="text-4xl font-bold text-[#B85C43] mb-6">$19 USD</div>
+          <div className="text-slate-500 line-through mb-2">$99.950 ARS</div>
+          <div className="text-4xl font-bold text-[#B85C43] mb-6">
+            $19.990 ARS
+          </div>
           <motion.a
             href={getCheckoutUrl()}
             whileHover={{
@@ -45,18 +46,19 @@ export function FinalPricingCTA() {
             }}
             className="flex items-center justify-center gap-2 md:gap-3 w-full bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold text-[13px] md:text-xl px-4 py-3.5 md:px-6 md:py-5 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-4"
           >
-            <span className="text-center">🚀 SÍ, QUIERO MI PROTOCOLO COMPLETO HOY</span>
+            <span className="text-center">🚀 SÍ, QUIERO MI MEGAPACK AHORA</span>
             <ArrowRight className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0" />
           </motion.a>
         </div>
 
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-sm text-slate-500 font-medium">
           <span className="flex items-center justify-center gap-1.5">
-            <Star
-              className="w-4 h-4 fill-[#d4a017] text-[#d4a017]"
-              aria-hidden="true"
-            />
-            4.9/5 — Reseñas verificadas
+            <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
+            Acceso inmediato
+          </span>
+          <span className="flex items-center justify-center gap-1.5">
+            <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
+            Pago único
           </span>
           <span className="flex items-center justify-center gap-1.5">
             <ShieldCheck
@@ -66,12 +68,8 @@ export function FinalPricingCTA() {
             Garantía de 7 Días
           </span>
           <span className="flex items-center justify-center gap-1.5">
-            <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
-            Acceso inmediato
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
-            Pago único
+            <Globe className="w-4 h-4 text-[#5C6851]" aria-hidden="true" />
+            Para mujeres de Argentina y LATAM
           </span>
         </div>
       </div>

@@ -16,12 +16,12 @@ export function GuaranteeSection() {
 
         <div className="bg-white/60 border border-amber-100 rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-sm">
           <h3 className="text-base md:text-xl font-bold text-[#2f3a2c] mb-2 md:mb-3">
-            Sin formularios, sin excusas
+            Sin preguntas, sin formularios interminables, sin drama
           </h3>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed mb-4 md:mb-6">
-            Tenés 7 días para revisar el sistema completo. Si no es
-            exactamente lo que prometemos, te devolvemos el 100% de tu
-            dinero.
+            Tenés 7 días para revisar el Megapack completo. Si no corresponde
+            con lo ofrecido, podés solicitar la devolución sin preguntas, sin
+            formularios interminables y sin drama.
           </p>
           <div className="inline-flex bg-white px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-amber-200 text-[#6f7a64] font-bold text-xs md:text-sm shadow-sm">
             Riesgo Cero Garantizado

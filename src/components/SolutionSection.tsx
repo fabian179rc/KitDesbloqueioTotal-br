@@ -9,9 +9,9 @@ export function SolutionSection() {
             LA SOLUCIÓN — SISTEMA TODO EN UNO
           </span>
           <h2 className="font-heading md:text-5xl font-bold text-[#2f3a2c] mb-6 max-w-3xl mx-auto text-[24px]">
-            El sistema completo para perder grasa con GLP-1 sin destruir tu{" "}
+            El sistema completo para entender qué te inflama y{" "}
             <span className="text-[#5C6851]">
-              músculo, tu piel ni tu metabolismo
+              comer con libertad en cualquier situación de tu vida real
             </span>
           </h2>
         </div>
@@ -36,11 +36,13 @@ export function SolutionSection() {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
+              srcSet={`${import.meta.env.BASE_URL}megapack-sibo-mockup.png`}
+              width={1536}
+              height={1024}
             />
             <img
-              src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
-              alt="Protocolo GLP-1 Sin Rebote"
+              src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
+              alt="Megapack SIBO: El Método Anti-Inflamación"
               width={1254}
               height={1254}
               loading="lazy"
@@ -52,19 +54,10 @@ export function SolutionSection() {
 
         <div className="bg-white/60 border border-amber-100 text-[#2f3a2c] rounded-3xl p-6 md:p-8 shadow-sm">
           <p className="md:text-xl font-medium text-slate-700 text-[16px]">
-            <span className="md:hidden">
-              Hasta el 40% del peso perdido con GLP-1 puede ser músculo. El
-              "Punto Dulce Metabólico" ordena a tu cuerpo quemar grasa y
-              blindar el músculo — la diferencia entre "enfermo y flaco" y
-              "atlético y definido".
-            </span>
-            <span className="hidden md:inline">
-              El problema no es el fármaco: es no tener el Manual de
-              Ingeniería. Hasta el 40% del peso perdido con GLP-1 puede ser
-              masa muscular. Existe un "Punto Dulce Metabólico" que le ordena
-              a tu cuerpo quemar grasa mientras blinda el músculo — la
-              diferencia entre verte "enfermo y flaco" o "atlético y definido".
-            </span>
+            Ese no es un problema de voluntad. Es un problema de no tener el
+            sistema correcto. Un sistema de trabajo completo, desde entender
+            qué te inflama hasta comer con libertad en cualquier situación de
+            tu vida real.
           </p>
         </div>
       </div>

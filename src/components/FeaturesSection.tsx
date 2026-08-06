@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 const features = [
   {
-    title: "💪 Preservación Muscular",
-    desc: "El protocolo exacto para que tu cuerpo queme grasa y no músculo.",
+    title: "✅ Ahorrar energía mental en cada comida",
+    desc: "Dejá de calcular desde cero. Usá listas, reemplazos y guías listas para aplicar hoy mismo.",
   },
   {
-    title: "✨ Protección de Piel",
-    desc: 'Péptidos para eliminar el "rostro hundido" del GLP-1 y la flacidez visible.',
+    title: "✅ Trabajar con más orden digestivo",
+    desc: "Organizá fases, síntomas, alimentos tolerados e intolerancias con una lógica simple y progresiva.",
   },
   {
-    title: "🛡️ Blindaje Metabólico",
-    desc: "Cómo salir del tratamiento sin que el hambre vuelva multiplicada.",
+    title: "✅ Presentarte mejor ante tu propio cuerpo",
+    desc: "Entendé qué te hace bien, qué te inflama y cómo avanzar con más seguridad en cada etapa.",
   },
   {
-    title: "📋 Protocolos Listos",
-    desc: "Calculadoras, checklists y guías para aplicar sin adivinar nada.",
+    title: "✅ Dar seguimiento sin improvisar",
+    desc: "Registrá síntomas, fechas y reacciones para que cada avance tenga control y evidencia real.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#2f3a2c]">
-            ¿QUÉ VAS A LOGRAR CON ESTE PROTOCOLO?
+            ¿QUÉ VAS A LOGRAR CON ESTE SISTEMA?
           </h2>
         </div>
 

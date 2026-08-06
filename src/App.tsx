@@ -3,15 +3,15 @@ import { MotionConfig } from "framer-motion";
 import { Landing } from "./pages/Landing";
 import { useScreenInit } from "./useScreenInit";
 import { getCheckoutUrl } from "./utils/checkoutUrl";
-const META_PIXEL_ID = "8851973042408664";
+const META_PIXEL_ID = "";
 const PAGE_TITLE =
-  "Protocolo GLP-1 Sin Rebote — Grasamax | Biohacking & GLP-1";
+  "Megapack SIBO: El Método Anti-Inflamación | Sistema completo para tu digestión";
 const PAGE_DESC =
-  "El manual técnico que tu médico no te dio para transformarte con GLP-1 sin perder músculo, firmeza ni piel.";
-const HERO_IMAGE = `${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`;
-const HERO_IMAGE_MOBILE = `${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`;
+  "Guías, protocolos, listas de compras, planners, checklists y reemplazos inteligentes para ordenar tu digestión y desinflamar tu abdomen. PDFs editables, imprimibles e interactivos.";
+const HERO_IMAGE = `${import.meta.env.BASE_URL}megapack-sibo-mockup.png`;
+const HERO_IMAGE_MOBILE = `${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`;
 
-const SITE_URL = "https://grasamax.com";
+const SITE_URL = "https://sibo.tupuntodigital.shop";
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(
     `meta[${attr}="${key}"]`,
@@ -35,6 +35,9 @@ function addLink(
   el.href = href;
   Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
   document.head.appendChild(el);
+}
+function absoluteUrl(path: string): string {
+  return new URL(path, SITE_URL).href;
 }
 export function App() {
   useScreenInit();
@@ -72,15 +75,15 @@ export function App() {
     setMeta("property", "og:title", PAGE_TITLE);
     setMeta("property", "og:description", PAGE_DESC);
     setMeta("property", "og:locale", "es_LA");
-    setMeta("property", "og:image", HERO_IMAGE);
+    setMeta("property", "og:image", absoluteUrl(HERO_IMAGE));
     setMeta("property", "og:url", SITE_URL);
     setMeta(
       "property",
       "og:site_name",
-      "Grasamax",
+      "Megapack SIBO",
     );
     setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:image", HERO_IMAGE);
+    setMeta("name", "twitter:image", absoluteUrl(HERO_IMAGE));
     setMeta("name", "twitter:title", PAGE_TITLE);
     setMeta("name", "twitter:description", PAGE_DESC);
     const ldId = "ld-product-schema";
@@ -91,17 +94,17 @@ export function App() {
       ld.textContent = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
-        name: "Protocolo GLP-1 Sin Rebote",
+        name: "Megapack SIBO: El Método Anti-Inflamación",
         description: PAGE_DESC,
-        image: HERO_IMAGE,
+        image: absoluteUrl(HERO_IMAGE),
         brand: {
           "@type": "Brand",
-          name: "Grasamax",
+          name: "Megapack SIBO",
         },
         offers: {
           "@type": "Offer",
-          price: "19",
-          priceCurrency: "USD",
+          price: "19990",
+          priceCurrency: "ARS",
           availability: "https://schema.org/InStock",
           url: getCheckoutUrl(),
         },
@@ -118,28 +121,28 @@ export function App() {
         "@type": "FAQPage",
         mainEntity: [
           {
-            q: "¿Sirve si recién empecé el tratamiento?",
-            a: "Sí, y es el momento ideal. Aplicar el protocolo desde el inicio es la diferencia entre terminar con un cuerpo atlético o uno flácido.",
+            q: "¿Es un producto físico o digital?",
+            a: "Es un producto 100% digital. Recibís acceso inmediato al material después de la compra para descargarlo y usarlo desde tu computadora, tablet o celular.",
           },
           {
-            q: "¿Tengo que hacer una dieta estricta?",
-            a: "No. La guía te enseña a optimizar lo poco que comés por la falta de hambre, para que cada bocado preserve tu músculo.",
+            q: "¿Sirve si estoy en tratamiento médico?",
+            a: "Sí. El Megapack es un sistema de organización alimentaria y guía práctica. No reemplaza la indicación de tu médico o nutricionista, sino que la complementa con herramientas concretas para el día a día.",
           },
           {
-            q: "¿Es seguro? ¿Puedo tener problemas?",
-            a: "100% legal. Son protocolos de nutrición, entrenamiento y suplementación basados en estudios PubMed. No reemplaza la orientación médica.",
+            q: "¿Necesito saber cocinar para usarlo?",
+            a: "No. El recetario tiene platos de 5 ingredientes o menos, pensados para personas sin tiempo y sin experiencia culinaria avanzada.",
           },
           {
-            q: "¿Cuándo recibo el material?",
-            a: "Acceso inmediato al finalizar el pago. Recibís todo en tu correo, listo para usar en cualquier dispositivo.",
+            q: "¿Cuándo recibo el acceso?",
+            a: "De forma inmediata. En menos de 5 minutos después de completar tu pago recibís todo el material en tu correo electrónico.",
           },
           {
-            q: "Ya llevo meses con el tratamiento y noto flacidez. ¿Sirve igual?",
-            a: "Sí. Nunca es tarde para proteger tu músculo. De hecho, si ya notás flacidez, es más urgente empezar hoy.",
+            q: "¿El precio es en pesos argentinos?",
+            a: "Sí. El precio es de $19.990 ARS, pago único, sin suscripción ni cargos adicionales.",
           },
           {
-            q: "¿Puedo pedir reembolso?",
-            a: "Sí. 7 días de garantía incondicional. Si no quedás satisfecho, te devolvemos el 100% sin preguntas.",
+            q: "¿Reemplaza una consulta médica o nutricional?",
+            a: "No. El Megapack es una herramienta educativa y de organización. Siempre es recomendable trabajar en paralelo con un profesional de la salud.",
           },
         ].map((item) => ({
           "@type": "Question",
@@ -156,7 +159,7 @@ export function App() {
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined")
       return;
-    // Solo se carga el Meta Pixel real (3505657626270665).
+    // Sin Meta Pixel configurado todavía (META_PIXEL_ID vacío = no-op).
     if (!META_PIXEL_ID) return;
     const loadPixel = () => {
       const w = window as any;

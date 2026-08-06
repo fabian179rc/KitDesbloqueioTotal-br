@@ -2,16 +2,16 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-const PRODUCT_NAME = "Protocolo GLP-1 Sin Rebote";
-const PRODUCT_NAME_SHORT = "Protocolo GLP-1";
+const PRODUCT_NAME = "Megapack SIBO: El Método Anti-Inflamación";
+const PRODUCT_NAME_SHORT = "Megapack SIBO";
 
 const NOTIFICATIONS = [
   { name: "Paola V.", city: "San José", minutesAgo: 27 },
-  { name: "Martín G.", city: "Ciudad de México", minutesAgo: 12 },
+  { name: "Valentina G.", city: "Ciudad de México", minutesAgo: 12 },
   { name: "Lucía F.", city: "Bogotá", minutesAgo: 41 },
-  { name: "Diego R.", city: "Lima", minutesAgo: 8 },
+  { name: "Daniela R.", city: "Lima", minutesAgo: 8 },
   { name: "Carla M.", city: "Santiago", minutesAgo: 33 },
-  { name: "Sergio N.", city: "Buenos Aires", minutesAgo: 19 },
+  { name: "Sofía N.", city: "Buenos Aires", minutesAgo: 19 },
 ];
 
 export function PurchaseNotification() {

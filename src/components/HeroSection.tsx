@@ -27,7 +27,7 @@ export function HeroSection() {
           }}
           className="inline-flex items-center gap-2 px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-[8px]"
         >
-          ✨ Protocolo Completo — Biohacking & GLP-1
+          ✨ Sistema Completo — Método Anti-Inflamación
         </motion.div>
 
         <motion.h1
@@ -45,11 +45,11 @@ export function HeroSection() {
           }}
           className="font-heading md:text-5xl font-extrabold text-[#2f3a2c] mb-0 text-[21px] leading-[1.15] md:leading-[normal]"
         >
-          ¿Y si el verdadero problema empezara
+          Tu digestión ordenada,
           <br />
-          <span className="text-[#B85C43]">
-            cuando termines el tratamiento?
-          </span>
+          <span className="text-[#B85C43]">tu abdomen desinflamado.</span>
+          <br />
+          Desde hoy.
         </motion.h1>
 
         <motion.div
@@ -70,11 +70,13 @@ export function HeroSection() {
           <picture>
             <source
               media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
+              srcSet={`${import.meta.env.BASE_URL}megapack-sibo-mockup.png`}
+              width={1536}
+              height={1024}
             />
             <img
-              src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
-              alt="Protocolo GLP-1 Sin Rebote"
+              src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
+              alt="Megapack SIBO: El Método Anti-Inflamación"
               width={1254}
               height={1254}
               loading="eager"
@@ -101,21 +103,16 @@ export function HeroSection() {
           className="max-w-2xl mx-auto mt-0 mb-2"
         >
           <p className="hidden md:block text-slate-600 md:text-lg leading-relaxed">
-            El manual técnico que tu médico no te dio — para transformarte de
-            verdad con tu tratamiento GLP-1.
+            Guías, protocolos, listas de compras, planners, checklists y
+            reemplazos inteligentes en PDFs editables, imprimibles e
+            interactivos.
           </p>
           <p className="font-semibold text-[#2f3a2c] text-[14px] md:text-lg leading-relaxed md:mt-2">
-            <span className="md:hidden">
-              💪 Preservá tu músculo · ✨ Protegé tu piel · 🛡️ Blindá tu
-              metabolismo frente al GLP-1
-            </span>
-            <span className="hidden md:inline">
-              💪 Preservá tu músculo · ✨ Protegé tu piel · 🛡️ Blindá tu
-              metabolismo contra el rebote
-            </span>
+            🗂️ Ordená tus comidas · 🎯 Identificá qué te inflama · ✅ Comé
+            con libertad
           </p>
           <p className="text-slate-500 text-[11px] md:text-sm mt-1 md:mt-2">
-            Sin horas en el gimnasio. Sin dietas imposibles.
+            Sin dietas imposibles. Sin adivinar qué te cayó mal.
           </p>
         </motion.div>
 
@@ -145,7 +142,7 @@ export function HeroSection() {
             }}
             className="flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold px-5 sm:px-8 py-4 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-5 text-[13px] sm:text-[16px] whitespace-nowrap"
           >
-            🚀 QUIERO EL PROTOCOLO COMPLETO
+            🚀 SÍ, QUIERO EL MEGAPACK AHORA
           </motion.a>
 
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-0.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-xs sm:text-sm font-medium text-slate-600">
@@ -154,7 +151,7 @@ export function HeroSection() {
                 className="w-3 h-3 sm:w-4 sm:h-4 fill-[#d4a017] text-[#d4a017]"
                 aria-hidden="true"
               />
-              4.9/5 — Reseñas verificadas
+              4.9/5 — Valoración de usuarias
             </span>
             <span className="flex items-center justify-center gap-1 sm:gap-1.5">
               <ShieldCheck
