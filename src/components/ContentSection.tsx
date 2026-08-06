@@ -3,32 +3,33 @@ import { motion } from 'framer-motion';
 import { PackageOpen, CheckCircle2 } from 'lucide-react';
 
 const temas = [
-  { emoji: '🔬', label: 'Fisiología GLP-1' },
-  { emoji: '🥩', label: 'Nutrición Proteica' },
-  { emoji: '🏋️', label: 'Entrenamiento EEM' },
-  { emoji: '🧬', label: 'Péptidos BPC-157' },
-  { emoji: '✨', label: 'Anti Rostro Hundido' },
-  { emoji: '🧪', label: 'GHK-Cu Colágeno' },
-  { emoji: '⚡', label: 'Electrolitos' },
-  { emoji: '📊', label: 'Composición Corporal' },
-  { emoji: '🔄', label: 'Exit Strategy' },
-  { emoji: '🩸', label: 'Análisis de sangre' },
-  { emoji: '💊', label: 'TB-500 Recuperación' },
-  { emoji: '🧠', label: 'Flexibilidad Metabólica' },
+  { emoji: '🔍', label: 'Rescate en Crisis' },
+  { emoji: '🚦', label: 'Semáforo de Alimentos' },
+  { emoji: '📋', label: '3 Fases Anti-Inflamación' },
+  { emoji: '🔄', label: 'Intercambios Rápidos' },
+  { emoji: '🍳', label: 'Recetas 5 Ingredientes' },
+  { emoji: '📊', label: 'Diario de Síntomas' },
+  { emoji: '🛒', label: 'Súper Argentino' },
+  { emoji: '✅', label: 'Checklist de Arranque' },
+  { emoji: '🏷️', label: 'Lectura de Etiquetas' },
+  { emoji: '🗓️', label: 'Planner Semanal' },
+  { emoji: '🍽️', label: 'Porciones Visuales' },
+  { emoji: '🧳', label: 'Comer Fuera de Casa' },
 ];
 
 const adaptabilidad = [
-  { emoji: '📚', label: 'Referencias PubMed' },
-  { emoji: '🚫', label: 'Sin opinión de internet' },
-  { emoji: '🌎', label: 'Toda Latinoamérica' },
+  { emoji: '🇦🇷', label: 'Adaptado a supermercados argentinos' },
+  { emoji: '📋', label: 'Protocolos prácticos y listos para aplicar' },
+  { emoji: '👩', label: 'Pensado para mujeres con SIBO' },
 ];
 
 const incluye = [
-  '🧬 Módulo 1 — La Trampa del GLP-1: por qué perdés músculo y cómo revertirlo',
-  '🥩 Módulo 2 — Nutrición de Densidad Extrema para saciedad temprana',
-  '🏋️ Módulo 3 — Entrenamiento de Estímulo Mínimo (30 min, 3x semana)',
-  '💉 Módulo 4 — Biohacking de Soporte: péptidos para piel y articulaciones',
-  '🔄 Módulo 5 — El Plan de Salida: cómo dejar el fármaco sin rebote',
+  '🔍 Protocolo de Rescate 24 Horas — Llegás a una crisis con estructura, sin improvisar ni entrar en pánico',
+  '⚠️ Semáforo de Supermercado Argentino — Listas listas para adaptar a cualquier góndola del Coto, Jumbo o Carrefour',
+  '📋 Guía de las 3 Fases Anti-Inflamación — No arrancás de cero, seguís el mapa en minutos',
+  '🔎 Matriz de Intercambio Rápido — Reemplazos listos para aplicar hoy con lo que ya tenés en casa',
+  '🚨 Recetario Cero Estrés — Platos de 5 ingredientes, claros y adaptados a Argentina',
+  '📊 Diario de Síntomas Express — Registros que generan claridad y aceleran tu reintroducción',
 ];
 
 export function ContentSection() {
@@ -41,12 +42,12 @@ export function ContentSection() {
             ¿Qué contiene?
           </span>
           <h2 className="font-heading font-bold text-[#2f3a2c] text-3xl md:text-5xl leading-tight mb-4">
-            ¿QUÉ CONTIENE EL{' '}
-            <span className="text-[#5C6851]">PROTOCOLO GLP-1 SIN REBOTE?</span>
+            ¿QUÉ CONTIENE EL MEGAPACK SIBO:{' '}
+            <span className="text-[#5C6851]">EL MÉTODO ANTI-INFLAMACIÓN?</span>
           </h2>
           <p className="text-lg md:text-xl font-bold text-[#5C6851] max-w-2xl mx-auto">
-            Todo lo que necesitás para transformarte sin destruir tu cuerpo
-            en el proceso. 💪
+            Todo lo que necesitás para ordenar tu digestión sin adivinar nada.
+            🎯
           </p>
         </div>
 
@@ -59,17 +60,14 @@ export function ContentSection() {
           <p className="text-slate-700 text-[15px] md:text-lg leading-relaxed">
             📚 El{' '}
             <span className="font-bold text-[#5C6851]">
-              Protocolo GLP-1 Sin Rebote
+              Megapack SIBO: El Método Anti-Inflamación
             </span>{' '}
-            reúne{' '}
-            <span className="font-bold text-[#2f3a2c]">150 páginas técnicas</span>,
-            organizadas en{' '}
-            <span className="font-semibold text-[#2f3a2c]">3 pilares del sistema</span>,
+            reúne guías, protocolos, listas de compras, planners, checklists
+            y reemplazos inteligentes, organizados en{' '}
+            <span className="font-semibold text-[#2f3a2c]">6 módulos</span>,
             con{' '}
-            <span className="font-semibold text-[#2f3a2c]">14 protocolos listos</span>{' '}
-            para usar y{' '}
             <span className="font-semibold text-[#2f3a2c]">5 bonos incluidos</span>{' '}
-            para preservar tu músculo, tu piel y blindar tu metabolismo.
+            — todo en PDFs editables, imprimibles e interactivos.
           </p>
         </motion.div>
 
@@ -105,7 +103,7 @@ export function ContentSection() {
           className="bg-[#4A553F] rounded-3xl p-5 md:p-7 shadow-sm mb-8 text-center"
         >
           <h3 className="font-heading font-bold text-white text-xl md:text-2xl mb-5">
-            🔬 Respaldado por evidencia real
+            🎯 Práctico y adaptado a tu realidad
           </h3>
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {adaptabilidad.map((r, i) => (
@@ -119,11 +117,10 @@ export function ContentSection() {
             ))}
           </div>
           <p className="text-[#e6ddc7] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            🔬 Con protocolos basados en{' '}
-            <span className="font-bold text-white">estudios reales de PubMed</span>,{' '}
-            cada recomendación cita su fuente — no es opinión de internet.
-            Adaptable a Semaglutida, Tirzepatida o cualquier agonista GLP-1,
-            en cualquier país de Latinoamérica.
+            🎯 Herramientas prácticas de organización y seguimiento
+            alimentario, pensadas para adaptarse a tu rutina real. No
+            reemplazan la indicación de tu médico o nutricionista — la
+            complementan.
           </p>
         </motion.div>
 
@@ -134,7 +131,7 @@ export function ContentSection() {
           className="bg-white border border-amber-100 rounded-3xl p-5 md:p-7 shadow-lg shadow-black/5"
         >
           <h3 className="font-heading font-bold text-[#2f3a2c] text-2xl md:text-3xl mb-5 text-center">
-            ✨ Los 5 módulos del protocolo:
+            ✨ Los 6 módulos del sistema:
           </h3>
           <div className="grid sm:grid-cols-2 gap-2 sm:gap-3 max-w-2xl mx-auto">
             {incluye.map((item, i) => (
