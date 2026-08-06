@@ -1,36 +1,37 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Gift } from "lucide-react";
+import { BonusCoverPlaceholder } from "./BonusCoverPlaceholder";
 const bonuses = [
   {
     num: 1,
-    title: 'Calculadora de Macros "Antiflacidez"',
-    desc: "Excel donde ingresás tu peso y dosis del fármaco y obtenés tus objetivos exactos de Proteína, Leucina y EAAs para prevenir la sarcopenia.",
-    image: "bono1.webp",
+    title: "Checklist de Arranque SIBO en 30 Minutos",
+    desc: "Llegás al primer día con una estructura clara, sin perderte ni depender solo de tu memoria. Hoja de ruta de 72 horas incluida.",
+    emoji: "✅",
   },
   {
     num: 2,
-    title: 'Protocolo "Rostro Firme" & Skin Elasticity',
-    desc: "Guía de péptidos (GHK-Cu, BPC-157) y suplementación oral para maximizar colágeno y elastina. Chau rostro demacrado y piel colgante.",
-    image: "bono2.webp",
+    title: "Guía Express de Etiquetas Anti-Inflamación",
+    desc: "Sabés exactamente qué mirar y qué evitar en cada producto del súper. Trabajás con más criterio en cada compra.",
+    emoji: "🏷️",
   },
   {
     num: 3,
-    title: "The Exit Strategy — El Plan de Salida Sin Rebote",
-    desc: "El manual para el día después de la última inyección. Cómo reintroducir calorías y mantener el peso perdido de por vida.",
-    image: "bono3.webp",
+    title: "Planner de Comidas Sin Estrés",
+    desc: "Tus semanas se ven más claras, más ordenadas y más fáciles de sostener sin improvisar ni caer en lo primero que encontrás.",
+    emoji: "🗓️",
   },
   {
     num: 4,
-    title: "Guía de Stacking con Péptidos de Recuperación",
-    desc: "Cómo combinar el GLP-1 con TB-500 y BPC-157 para entrenar con cargas incluso en déficit calórico agresivo.",
-    image: "bono4.webp",
+    title: "Tarjetas Visuales de Porciones y Combinaciones",
+    desc: "Cada comida termina con proteína, base y verdura definida. Sin pesar, sin contar calorías, sin drama.",
+    emoji: "🍽️",
   },
   {
     num: 5,
-    title: "Checklist de Eliminación de Efectos Secundarios",
-    desc: "Protocolos rápidos para neutralizar náuseas, fatiga extrema y neblina mental. Seguí siendo productivo mientras perdés peso.",
-    image: "bono5.webp",
+    title: "Kit de Emergencia para Comer Fuera de Casa",
+    desc: "Presentás tu proceso con más seguridad y tu entorno entiende mejor cómo acompañarte sin presiones.",
+    emoji: "🧳",
   },
 ];
 
@@ -70,15 +71,7 @@ export function BonusesSection() {
               className="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm"
             >
               <div className="relative rounded-xl overflow-hidden mb-3 h-56 bg-[#f4efe2] flex items-center justify-center">
-                <img
-                  src={`${import.meta.env.BASE_URL}${b.image}`}
-                  alt={`Bono ${b.num}: ${b.title}`}
-                  width={400}
-                  height={500}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-contain"
-                />
+                <BonusCoverPlaceholder emoji={b.emoji} num={b.num} />
                 <span className="absolute top-2.5 left-2.5 bg-rose-500 text-white font-bold text-[11px] tracking-wide uppercase px-2.5 py-1 rounded-md shadow-sm">
                   Bono {b.num}
                 </span>
@@ -102,7 +95,7 @@ export function BonusesSection() {
             Todo incluido en
           </p>
           <h3 className="font-heading font-bold text-[#2f3a2c] text-3xl md:text-4xl mb-3">
-            el Protocolo GLP-1 Sin Rebote
+            el Megapack SIBO: El Método Anti-Inflamación
           </h3>
           <p className="text-slate-600">
             Los 5 bonos son gratis con tu compra hoy.
