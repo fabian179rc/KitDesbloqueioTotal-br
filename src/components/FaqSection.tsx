@@ -3,28 +3,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
-    q: "¿Sirve si recién empecé el tratamiento?",
-    a: "Sí, y es el momento ideal. Aplicar el protocolo desde el inicio es la diferencia entre terminar con un cuerpo atlético o uno flácido.",
+    q: "¿Es un producto físico o digital?",
+    a: "Es un producto 100% digital. Recibís acceso inmediato al material después de la compra para descargarlo y usarlo desde tu computadora, tablet o celular.",
   },
   {
-    q: "¿Tengo que hacer una dieta estricta?",
-    a: "No. La guía te enseña a optimizar lo poco que comés por la falta de hambre, para que cada bocado preserve tu músculo.",
+    q: "¿Sirve si estoy en tratamiento médico?",
+    a: "Sí. El Megapack es un sistema de organización alimentaria y guía práctica. No reemplaza la indicación de tu médico o nutricionista, sino que la complementa con herramientas concretas para el día a día.",
   },
   {
-    q: "¿Es seguro? ¿Puedo tener problemas?",
-    a: "100% legal. Son protocolos de nutrición, entrenamiento y suplementación basados en estudios PubMed. No reemplaza la orientación médica.",
+    q: "¿Necesito saber cocinar para usarlo?",
+    a: "No. El recetario tiene platos de 5 ingredientes o menos, pensados para personas sin tiempo y sin experiencia culinaria avanzada.",
   },
   {
-    q: "¿Cuándo recibo el material?",
-    a: "Acceso inmediato al finalizar el pago. Recibís todo en tu correo, listo para usar en cualquier dispositivo.",
+    q: "¿Cuándo recibo el acceso?",
+    a: "De forma inmediata. En menos de 5 minutos después de completar tu pago recibís todo el material en tu correo electrónico.",
   },
   {
-    q: "Ya llevo meses con el tratamiento y noto flacidez. ¿Sirve igual?",
-    a: "Sí. Nunca es tarde para proteger tu músculo. De hecho, si ya notás flacidez, es más urgente empezar hoy.",
+    q: "¿El precio es en pesos argentinos?",
+    a: "Sí. El precio es de $19.990 ARS, pago único, sin suscripción ni cargos adicionales.",
   },
   {
-    q: "¿Puedo pedir reembolso?",
-    a: "Sí. 7 días de garantía incondicional. Si no quedás satisfecho, te devolvemos el 100% sin preguntas.",
+    q: "¿Reemplaza una consulta médica o nutricional?",
+    a: "No. El Megapack es una herramienta educativa y de organización. Siempre es recomendable trabajar en paralelo con un profesional de la salud.",
   },
 ];
 
