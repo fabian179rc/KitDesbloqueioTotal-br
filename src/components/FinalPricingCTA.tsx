@@ -33,7 +33,7 @@ export function FinalPricingCTA() {
           </h3>
           <div className="text-slate-500 line-through mb-2">€47,00</div>
           <div className="text-4xl font-bold text-[#B85C43] mb-6">
-            €19,90
+            €24,90
           </div>
           <motion.a
             href={getCheckoutUrl()}

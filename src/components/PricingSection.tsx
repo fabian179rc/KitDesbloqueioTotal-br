@@ -98,7 +98,7 @@ export function PricingSection() {
               }}
             />
             <div className="relative text-center text-white leading-none rotate-12">
-              <div className="text-2xl md:text-3xl font-extrabold">58%</div>
+              <div className="text-2xl md:text-3xl font-extrabold">47%</div>
               <div className="text-[9px] md:text-[10px] font-bold tracking-wide mt-0.5">
                 DI SCONTO
               </div>
@@ -121,7 +121,7 @@ export function PricingSection() {
           </div>
 
           <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
-            €19,90
+            €24,90
           </div>
 
           <p className="text-[#B85C43] font-semibold text-base leading-snug mb-6">
