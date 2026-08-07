@@ -27,7 +27,7 @@ export function HeroSection() {
           }}
           className="inline-flex items-center gap-2 px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-[8px]"
         >
-          ✨ Sistema Completo — Método Anti-Inflamación
+          ✨ Gran Pacchetto Meccanica Kids
         </motion.div>
 
         <motion.h1
@@ -45,11 +45,11 @@ export function HeroSection() {
           }}
           className="font-heading md:text-5xl font-extrabold text-[#2f3a2c] mb-0 text-[21px] leading-[1.15] md:leading-[normal]"
         >
-          Tu digestión ordenada,
+          La Passione per i Motori di Tuo Figlio,
           <br />
-          <span className="text-[#B85C43]">tu abdomen desinflamado.</span>
+          <span className="text-[#B85C43]">Accesa.</span>
           <br />
-          Desde hoy.
+          Da Oggi.
         </motion.h1>
 
         <motion.div
@@ -76,7 +76,7 @@ export function HeroSection() {
             />
             <img
               src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
-              alt="Megapack SIBO: El Método Anti-Inflamación"
+              alt="Gran Pacchetto Meccanica Kids"
               width={1254}
               height={1254}
               loading="eager"
@@ -103,16 +103,14 @@ export function HeroSection() {
           className="max-w-2xl mx-auto mt-0 mb-4 sm:mb-2"
         >
           <p className="hidden md:block text-slate-600 md:text-lg leading-relaxed">
-            Guías, protocolos, listas de compras, planners, checklists y
-            reemplazos inteligentes en PDFs editables, imprimibles e
-            interactivos.
+            Guida illustrata, flashcards, poster, missioni e diploma: tutto
+            stampabile, tutto pronto, tutto pensato per imparare giocando.
           </p>
           <p className="font-semibold text-[#2f3a2c] text-[14px] md:text-lg leading-relaxed md:mt-2">
-            🗂️ Ordená tus comidas · 🎯 Identificá qué te inflama · ✅ Comé
-            con libertad
+            🔧 Impara giocando · 🏆 Missioni e diploma · 🖨️ Tutto stampabile
           </p>
           <p className="text-slate-500 text-[11px] md:text-sm mt-2 md:mt-2">
-            Sin dietas imposibles. Sin adivinar qué te cayó mal.
+            Per bambini dai 6 ai 12 anni, con o senza conoscenze meccaniche.
           </p>
         </motion.div>
 
@@ -142,7 +140,7 @@ export function HeroSection() {
             }}
             className="flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold px-5 sm:px-8 py-4 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-7 sm:mb-5 text-[13px] sm:text-[16px] whitespace-nowrap"
           >
-            🚀 SÍ, QUIERO EL MEGAPACK AHORA
+            🚀 Sì, voglio il Gran Pacchetto adesso
           </motion.a>
 
           <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-xs sm:text-sm font-medium text-slate-600">
@@ -151,25 +149,25 @@ export function HeroSection() {
                 className="w-3 h-3 sm:w-4 sm:h-4 fill-[#d4a017] text-[#d4a017]"
                 aria-hidden="true"
               />
-              4.9/5 — Valoración de usuarias
+              4.9/5 — Valutazione dei genitori
             </span>
             <span className="flex items-center justify-center gap-1 sm:gap-1.5">
               <ShieldCheck
                 className="w-3 h-3 sm:w-4 sm:h-4 text-[#4A7CB5]"
                 aria-hidden="true"
               />
-              Garantía de 7 Días
+              Garanzia 7 Giorni — Zero Rischio
             </span>
             <span className="flex items-center justify-center gap-1 sm:gap-1.5">
               <Zap className="w-3 h-3 sm:w-4 sm:h-4 text-[#E8A23D]" aria-hidden="true" />
-              Acceso inmediato
+              Prodotto 100% Digitale
             </span>
             <span className="flex items-center justify-center gap-1 sm:gap-1.5">
               <CreditCard
                 className="w-3 h-3 sm:w-4 sm:h-4 text-[#4A7CB5]"
                 aria-hidden="true"
               />
-              Pago único
+              Accesso Immediato
             </span>
           </div>
         </motion.div>

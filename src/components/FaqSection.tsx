@@ -3,28 +3,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
-    q: "¿Es un producto físico o digital?",
-    a: "Es un producto 100% digital. Recibís acceso inmediato al material después de la compra para descargarlo y usarlo desde tu computadora, tablet o celular.",
+    q: "È un prodotto fisico o digitale?",
+    a: "È un prodotto 100% digitale. Riceverai l'accesso immediato al materiale dopo l'acquisto per scaricarlo e stamparlo da casa tua.",
   },
   {
-    q: "¿Sirve si estoy en tratamiento médico?",
-    a: "Sí. El Megapack es un sistema de organización alimentaria y guía práctica. No reemplaza la indicación de tu médico o nutricionista, sino que la complementa con herramientas concretas para el día a día.",
+    q: "Per che età è adatto?",
+    a: "Il Gran Pacchetto è progettato per bambini dai 6 ai 12 anni. I contenuti sono spiegati con un linguaggio semplice e progressivo.",
   },
   {
-    q: "¿Necesito saber cocinar para usarlo?",
-    a: "No. El recetario tiene platos de 5 ingredientes o menos, pensados para personas sin tiempo y sin experiencia culinaria avanzada.",
+    q: "Devo avere conoscenze meccaniche per usarlo?",
+    a: "No. Il kit è pensato anche per genitori che non sanno nulla di meccanica. Le spiegazioni sono chiare e guidano sia l'adulto che il bambino.",
   },
   {
-    q: "¿Cuándo recibo el acceso?",
-    a: "De forma inmediata. En menos de 5 minutos después de completar tu pago recibís todo el material en tu correo electrónico.",
+    q: "Quando ricevo l'accesso?",
+    a: "Immediatamente dopo il pagamento. Riceverai un link per scaricare tutti i file PDF direttamente nella tua email.",
   },
   {
-    q: "¿El precio es en pesos argentinos?",
-    a: "Sí. El precio es de $19.990 ARS, pago único, sin suscripción ni cargos adicionales.",
+    q: "Funziona senza stampante?",
+    a: "Sì. Puoi usare la guida principale direttamente dallo schermo. Alcuni bonus (flashcards, poster, diploma) sono pensati per la stampa ma possono essere usati anche in digitale.",
   },
   {
-    q: "¿Reemplaza una consulta médica o nutricional?",
-    a: "No. El Megapack es una herramienta educativa y de organización. Siempre es recomendable trabajar en paralelo con un profesional de la salud.",
+    q: "Il contenuto è in italiano?",
+    a: "Sì, tutto il materiale è scritto in italiano corretto, con un linguaggio adatto ai bambini e accessibile per i genitori.",
   },
 ];
 
@@ -35,11 +35,11 @@ export function FaqSection() {
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-8">
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#566049] text-white font-semibold tracking-[0.18em] uppercase text-xs">
-            Preguntas Frecuentes
+            Domande Frequenti
           </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#2f3a2c] leading-tight">
-            Respondemos{" "}
-            <em className="text-[#c06a52] font-bold italic">tus preguntas</em>
+            Rispondiamo{" "}
+            <em className="text-[#c06a52] font-bold italic">alle tue domande</em>
           </h2>
         </div>
 

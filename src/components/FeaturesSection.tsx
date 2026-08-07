@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 const features = [
   {
-    title: "✅ Ahorrar energía mental en cada comida",
-    desc: "Dejá de calcular desde cero. Usá listas, reemplazos y guías listas para aplicar hoy mismo.",
+    title: "✅ Insegnare senza preparazione",
+    desc: "Tutto è già strutturato. Apri il PDF e inizia subito, senza dover cercare materiali o inventare spiegazioni.",
   },
   {
-    title: "✅ Trabajar con más orden digestivo",
-    desc: "Organizá fases, síntomas, alimentos tolerados e intolerancias con una lógica simple y progresiva.",
+    title: "✅ Mantenere alta l'attenzione",
+    desc: "Missioni, flashcards e sfide giornaliere tengono il bambino coinvolto per ore, senza schermi.",
   },
   {
-    title: "✅ Presentarte mejor ante tu propio cuerpo",
-    desc: "Entendé qué te hace bien, qué te inflama y cómo avanzar con más seguridad en cada etapa.",
+    title: "✅ Creare un ricordo indelebile",
+    desc: "Il Diploma finale trasforma l'apprendimento in un momento di orgoglio per il bambino e per te.",
   },
   {
-    title: "✅ Dar seguimiento sin improvisar",
-    desc: "Registrá síntomas, fechas y reacciones para que cada avance tenga control y evidencia real.",
+    title: "✅ Spiegare concetti complessi in modo semplice",
+    desc: "Analogie visive e linguaggio accessibile fanno il lavoro difficile al posto tuo.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#2f3a2c]">
-            ¿QUÉ VAS A LOGRAR CON ESTE SISTEMA?
+            COSA POTRAI FARE CON QUESTO SISTEMA?
           </h2>
         </div>
 

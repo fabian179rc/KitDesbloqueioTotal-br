@@ -14,27 +14,26 @@ export function FinalPricingCTA() {
       <div className="container mx-auto px-4 max-w-3xl relative z-10">
         <div className="mb-5">
           <span className="inline-block px-6 py-2.5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
-            Última Oportunidad
+            Ultima Occasione
           </span>
         </div>
         <h2 className="text-3xl md:text-5xl font-bold font-heading text-[#2f3a2c] mb-5 leading-tight">
-          Más claridad, más orden y{" "}
-          <span className="text-[#B85C43]">menos ansiedad en cada comida</span>
+          Più curiosità, più connessione e{" "}
+          <span className="text-[#B85C43]">più momenti insieme</span>
           .
         </h2>
         <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-          Dejá de armar cada semana desde cero: el Megapack te da el sistema
-          para lograrlo.
+          Smetti di sperare che tuo figlio si interessi ai motori da solo: il
+          Gran Pacchetto ti dà il sistema per farlo accadere.
         </p>
 
         <div className="bg-white border border-amber-100 rounded-3xl p-6 md:p-7 shadow-lg shadow-black/5 max-w-xl mx-auto mb-6">
           <h3 className="font-bold text-[#2f3a2c] mb-2 text-lg md:text-xl">
-            🎁 Kit Completo Megapack SIBO: El Método Anti-Inflamación + 5
-            Bonos Incluidos
+            🎁 Kit Completo Gran Pacchetto Meccanica Kids + 5 Bonus Inclusi
           </h3>
-          <div className="text-slate-500 line-through mb-2">$99.950 ARS</div>
+          <div className="text-slate-500 line-through mb-2">€47,00</div>
           <div className="text-4xl font-bold text-[#B85C43] mb-6">
-            $19.990 ARS
+            €19,90
           </div>
           <motion.a
             href={getCheckoutUrl()}
@@ -46,7 +45,7 @@ export function FinalPricingCTA() {
             }}
             className="flex items-center justify-center gap-2 md:gap-3 w-full bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold text-[13px] md:text-xl px-4 py-3.5 md:px-6 md:py-5 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-4"
           >
-            <span className="text-center">🚀 SÍ, QUIERO MI MEGAPACK AHORA</span>
+            <span className="text-center">🚀 SÌ, VOGLIO IL MIO GRAN PACCHETTO ADESSO</span>
             <ArrowRight className="w-4 h-4 md:w-6 md:h-6 flex-shrink-0" />
           </motion.a>
         </div>
@@ -54,22 +53,22 @@ export function FinalPricingCTA() {
         <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-sm text-slate-500 font-medium">
           <span className="flex items-center justify-center gap-1.5">
             <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
-            Acceso inmediato
+            Accesso immediato
           </span>
           <span className="flex items-center justify-center gap-1.5">
             <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
-            Pago único
+            Pagamento unico
           </span>
           <span className="flex items-center justify-center gap-1.5">
             <ShieldCheck
               className="w-4 h-4 text-[#4A7CB5]"
               aria-hidden="true"
             />
-            Garantía de 7 Días
+            Garanzia di 7 Giorni
           </span>
           <span className="flex items-center justify-center gap-1.5">
             <Globe className="w-4 h-4 text-[#5C6851]" aria-hidden="true" />
-            Para mujeres de Argentina y LATAM
+            Prodotto digitale per famiglie italiane
           </span>
         </div>
       </div>

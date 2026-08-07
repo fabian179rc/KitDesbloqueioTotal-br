@@ -3,33 +3,33 @@ import { motion } from 'framer-motion';
 import { PackageOpen, CheckCircle2 } from 'lucide-react';
 
 const temas = [
-  { emoji: '🔍', label: 'Rescate en Crisis' },
-  { emoji: '🚦', label: 'Semáforo de Alimentos' },
-  { emoji: '📋', label: '3 Fases Anti-Inflamación' },
-  { emoji: '🔄', label: 'Intercambios Rápidos' },
-  { emoji: '🍳', label: 'Recetas 5 Ingredientes' },
-  { emoji: '📊', label: 'Diario de Síntomas' },
-  { emoji: '🛒', label: 'Súper Argentino' },
-  { emoji: '✅', label: 'Checklist de Arranque' },
-  { emoji: '🏷️', label: 'Lectura de Etiquetas' },
-  { emoji: '🗓️', label: 'Planner Semanal' },
-  { emoji: '🍽️', label: 'Porciones Visuales' },
-  { emoji: '🧳', label: 'Comer Fuera de Casa' },
+  { emoji: '🔧', label: 'Il Motore a Scoppio' },
+  { emoji: '⚙️', label: 'La Trasmissione' },
+  { emoji: '🛑', label: 'Il Sistema Frenante' },
+  { emoji: '🔘', label: 'Gli Pneumatici' },
+  { emoji: '📖', label: 'Dizionario Tecnico' },
+  { emoji: '🏆', label: 'Kit Bonus Operativo' },
+  { emoji: '📓', label: "Diario dell'Officina" },
+  { emoji: '🗂️', label: 'Flashcards delle Parti' },
+  { emoji: '🖼️', label: "Poster Anatomia dell'Auto" },
+  { emoji: '🎯', label: 'Sfida dei 7 Giorni' },
+  { emoji: '🏅', label: 'Patente di Piccolo Meccanico' },
+  { emoji: '👦', label: 'Per bambini dai 6 ai 12 anni' },
 ];
 
 const adaptabilidad = [
-  { emoji: '🇦🇷', label: 'Adaptado a supermercados argentinos' },
-  { emoji: '📋', label: 'Protocolos prácticos y listos para aplicar' },
-  { emoji: '👩', label: 'Pensado para mujeres con SIBO' },
+  { emoji: '🖨️', label: 'Tutto stampabile da casa' },
+  { emoji: '📖', label: 'Linguaggio semplice, adatto ai bambini' },
+  { emoji: '👨‍👩‍👧', label: 'Anche per genitori senza esperienza meccanica' },
 ];
 
 const incluye = [
-  '🔍 Protocolo de Rescate 24 Horas — Llegás a una crisis con estructura, sin improvisar ni entrar en pánico',
-  '⚠️ Semáforo de Supermercado Argentino — Listas listas para adaptar a cualquier góndola del Coto, Jumbo o Carrefour',
-  '📋 Guía de las 3 Fases Anti-Inflamación — No arrancás de cero, seguís el mapa en minutos',
-  '🔎 Matriz de Intercambio Rápido — Reemplazos listos para aplicar hoy con lo que ya tenés en casa',
-  '🚨 Recetario Cero Estrés — Platos de 5 ingredientes, claros y adaptados a Argentina',
-  '📊 Diario de Síntomas Express — Registros que generan claridad y aceleran tu reintroducción',
+  '🔧 Il Motore a Scoppio — Il ciclo a 4 tempi spiegato con analogie semplici e disegni',
+  '⚙️ La Trasmissione — Come il movimento arriva dalle ruote senza formule complicate',
+  "🛑 Il Sistema Frenante — Perché l'auto si ferma e come funzionano i dischi",
+  '🔘 Gli Pneumatici — Perché le gomme hanno il disegno e come si legge l\'usura',
+  '📖 Dizionario del Piccolo Ingegnere — 30+ termini tecnici spiegati con esempi di vita reale',
+  '🏆 Kit Bonus Operativo — Diario, Flashcards, Poster, Sfida e Diploma inclusi',
 ];
 
 export function ContentSection() {
@@ -39,15 +39,14 @@ export function ContentSection() {
         <div className="text-center mb-8">
           <span className="inline-flex items-center gap-2 px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             <PackageOpen className="w-4 h-4 text-[#d4a017]" />
-            ¿Qué contiene?
+            Cosa include?
           </span>
           <h2 className="font-heading font-bold text-[#2f3a2c] text-3xl md:text-5xl leading-tight mb-4">
-            ¿QUÉ CONTIENE EL MEGAPACK SIBO:{' '}
-            <span className="text-[#5C6851]">EL MÉTODO ANTI-INFLAMACIÓN?</span>
+            COSA INCLUDE IL GRAN PACCHETTO{' '}
+            <span className="text-[#5C6851]">MECCANICA KIDS?</span>
           </h2>
           <p className="text-lg md:text-xl font-bold text-[#5C6851] max-w-2xl mx-auto">
-            Todo lo que necesitás para ordenar tu digestión sin adivinar nada.
-            🎯
+            Tutto il sistema in un solo prodotto. 🎯
           </p>
         </div>
 
@@ -58,22 +57,23 @@ export function ContentSection() {
           className="bg-white/60 border border-amber-100 rounded-3xl p-5 md:p-7 shadow-sm mb-6 text-center"
         >
           <p className="text-slate-700 text-[15px] md:text-lg leading-relaxed">
-            📚 El{' '}
+            📦 Il{' '}
             <span className="font-bold text-[#5C6851]">
-              Megapack SIBO: El Método Anti-Inflamación
+              Gran Pacchetto Meccanica Kids
             </span>{' '}
-            reúne guías, protocolos, listas de compras, planners, checklists
-            y reemplazos inteligentes, organizados en{' '}
-            <span className="font-semibold text-[#2f3a2c]">6 módulos</span>,
+            include guida illustrata, flashcards, poster, missioni e
+            diploma, organizzati in{' '}
+            <span className="font-semibold text-[#2f3a2c]">6 moduli</span>,
             con{' '}
-            <span className="font-semibold text-[#2f3a2c]">5 bonos incluidos</span>{' '}
-            — todo en PDFs editables, imprimibles e interactivos.
+            <span className="font-semibold text-[#2f3a2c]">5 bonus inclusi</span>{' '}
+            — tutto stampabile, tutto pronto, tutto pensato per imparare
+            giocando.
           </p>
         </motion.div>
 
         <div className="mb-8">
           <h3 className="font-heading font-bold text-[#2f3a2c] text-xl md:text-2xl mb-4 text-center">
-            🎯 Incluye los bloques más importantes del protocolo
+            🎯 Include i blocchi più importanti del percorso
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {temas.map((t, i) => (
@@ -103,7 +103,7 @@ export function ContentSection() {
           className="bg-[#4A553F] rounded-3xl p-5 md:p-7 shadow-sm mb-8 text-center"
         >
           <h3 className="font-heading font-bold text-white text-xl md:text-2xl mb-5">
-            🎯 Práctico y adaptado a tu realidad
+            🎯 Pratico e pensato per la tua famiglia
           </h3>
           <div className="flex flex-wrap justify-center gap-3 mb-6">
             {adaptabilidad.map((r, i) => (
@@ -117,10 +117,10 @@ export function ContentSection() {
             ))}
           </div>
           <p className="text-[#e6ddc7] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            🎯 Herramientas prácticas de organización y seguimiento
-            alimentario, pensadas para adaptarse a tu rutina real. No
-            reemplazan la indicación de tu médico o nutricionista — la
-            complementan.
+            🎯 Materiale pratico pensato per famiglie italiane, da usare con
+            o senza esperienza meccanica pregressa. Qualsiasi attività con
+            parti meccaniche reali va sempre svolta sotto la supervisione di
+            un adulto responsabile.
           </p>
         </motion.div>
 
@@ -131,7 +131,7 @@ export function ContentSection() {
           className="bg-white border border-amber-100 rounded-3xl p-5 md:p-7 shadow-lg shadow-black/5"
         >
           <h3 className="font-heading font-bold text-[#2f3a2c] text-2xl md:text-3xl mb-5 text-center">
-            ✨ Los 6 módulos del sistema:
+            ✨ I 6 moduli del sistema:
           </h3>
           <div className="grid sm:grid-cols-2 gap-2 sm:gap-3 max-w-2xl mx-auto">
             {incluye.map((item, i) => (

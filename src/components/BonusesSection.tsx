@@ -3,32 +3,32 @@ import { motion } from "framer-motion";
 const bonuses = [
   {
     num: 1,
-    title: "Checklist de Arranque SIBO en 30 Minutos",
-    desc: "Llegás al primer día con una estructura clara, sin perderte ni depender solo de tu memoria. Hoja de ruta de 72 horas incluida.",
+    title: "Il Diario dell'Officina",
+    desc: "Il bambino registra i \"lavori\" fatti sull'auto di famiglia. Ogni visita sotto il cofano diventa un'esperienza documentata e ricordata.",
     image: "/bono1.webp",
   },
   {
     num: 2,
-    title: "Guía Express de Etiquetas Anti-Inflamación",
-    desc: "Sabés exactamente qué mirar y qué evitar en cada producto del súper. Trabajás con más criterio en cada compra.",
+    title: "Flashcards delle Parti",
+    desc: "24 carte da ritagliare con illustrazione e definizione lampo. Impara i nomi tecnici giocando a indovinare, come un vero ingegnere.",
     image: "/bono2.webp",
   },
   {
     num: 3,
-    title: "Planner de Comidas Sin Estrés",
-    desc: "Tus semanas se ven más claras, más ordenadas y más fáciles de sostener sin improvisar ni caer en lo primero que encontrás.",
+    title: "Poster Anatomia dell'Auto",
+    desc: "Un'infografica A4 stampabile da appendere in cameretta. Vista \"a raggi X\" dell'auto con tutti i componenti etichettati in italiano.",
     image: "/bono3.webp",
   },
   {
     num: 4,
-    title: "Tarjetas Visuales de Porciones y Combinaciones",
-    desc: "Cada comida termina con proteína, base y verdura definida. Sin pesar, sin contar calorías, sin drama.",
+    title: "Missione Meccanica — La Sfida dei 7 Giorni",
+    desc: "Un calendario di 7 missioni reali da completare insieme. Dal riconoscere i loghi allo spiegare il motore: ogni giorno un obiettivo concreto.",
     image: "/bono4.webp",
   },
   {
     num: 5,
-    title: "Kit de Emergencia para Comer Fuera de Casa",
-    desc: "Presentás tu proceso con más seguridad y tu entorno entiende mejor cómo acompañarte sin presiones.",
+    title: "La Patente di Piccolo Meccanico",
+    desc: "Il diploma ufficiale personalizzabile da stampare e consegnare. Il premio finale che celebra tutto ciò che il bambino ha imparato.",
     image: "/bono5.webp",
   },
 ];
@@ -43,8 +43,8 @@ export function BonusesSection() {
             5 Bonos Incluidos
           </span> */}
           <h2 className="font-heading font-bold text-[#2f3a2c] text-3xl md:text-5xl leading-tight">
-            Y además, recibís{" "}
-            <span className="italic text-[#5C6851]">5 bonos de alto valor</span>
+            5 Bonus Inclusi{" "}
+            <span className="italic text-[#5C6851]">Senza Costo Aggiuntivo</span>
           </h2>
         </div>
 

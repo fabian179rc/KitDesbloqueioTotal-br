@@ -12,8 +12,8 @@ import { getCheckoutUrl } from "../utils/checkoutUrl";
 export function PricingSection() {
   const [timeLeft, setTimeLeft] = useState({
     h: 1,
-    m: 28,
-    s: 47,
+    m: 29,
+    s: 59,
   });
   useEffect(() => {
     const timer = setInterval(() => {
@@ -44,15 +44,15 @@ export function PricingSection() {
   const timeBlocks = [
     {
       value: timeLeft.h,
-      label: "Horas",
+      label: "Ore",
     },
     {
       value: timeLeft.m,
-      label: "Minutos",
+      label: "Minuti",
     },
     {
       value: timeLeft.s,
-      label: "Segundos",
+      label: "Secondi",
     },
   ];
 
@@ -63,11 +63,11 @@ export function PricingSection() {
     >
       <div className="container mx-auto px-4 max-w-2xl text-center relative z-10">
         <span className="inline-block px-6 py-2.5 mb-6 rounded-full border border-white/30 bg-white/10 text-white/90 font-semibold tracking-[0.18em] uppercase text-xs">
-          🔥 Oferta Especial — Pack Completo
+          🔥 Offerta Speciale — Pacchetto Completo
         </span>
         <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-          Accedé hoy al{" "}
-          <em className="italic font-bold text-[#f0e6d2]">Megapack completo</em>
+          Accedi oggi al{" "}
+          <em className="italic font-bold text-[#f0e6d2]">Gran Pacchetto completo</em>
         </h2>
 
         <div className="relative inline-block mb-2 w-full max-w-md mx-auto">
@@ -80,7 +80,7 @@ export function PricingSection() {
             />
             <img
               src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
-              alt="Megapack SIBO: El Método Anti-Inflamación"
+              alt="Gran Pacchetto Meccanica Kids"
               width={1254}
               height={1254}
               loading="lazy"
@@ -98,9 +98,9 @@ export function PricingSection() {
               }}
             />
             <div className="relative text-center text-white leading-none rotate-12">
-              <div className="text-2xl md:text-3xl font-extrabold">80%</div>
+              <div className="text-2xl md:text-3xl font-extrabold">58%</div>
               <div className="text-[9px] md:text-[10px] font-bold tracking-wide mt-0.5">
-                DE DESCUENTO
+                DI SCONTO
               </div>
             </div>
           </div>
@@ -113,19 +113,19 @@ export function PricingSection() {
       >
         <div className="bg-white rounded-3xl shadow-2xl shadow-black/10 p-7 md:p-8 text-center">
           <div className="text-slate-500 text-base md:text-lg mb-3">
-            Precio Normal: <span className="line-through">$99.950 ARS</span>
+            Prezzo normale: <span className="line-through">€47,00</span>
           </div>
 
           <div className="inline-flex items-center gap-2 bg-[#F3E3C3] text-[#9C5330] font-bold px-5 py-2.5 rounded-full text-sm mb-5">
-            <Flame className="w-4 h-4" /> 80% DE DESCUENTO
+            <Flame className="w-4 h-4" /> Prezzo speciale di lancio
           </div>
 
           <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
-            $19.990 ARS
+            €19,90
           </div>
 
           <p className="text-[#B85C43] font-semibold text-base leading-snug mb-6">
-            🔥 ¡Última oportunidad! El precio sube al finalizar el contador.
+            🔥 Ultima occasione! Il prezzo aumenta allo scadere del contatore.
           </p>
 
           <div className="flex justify-center gap-3 mb-7">
@@ -155,7 +155,7 @@ export function PricingSection() {
             className="flex items-center justify-center gap-3 w-full bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold text-lg md:text-xl px-6 py-5 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-6"
           >
             <span className="flex items-center gap-2 text-center">
-              🚀 SÍ, QUIERO EL MEGAPACK AHORA
+              🚀 SÌ, VOGLIO IL GRAN PACCHETTO ADESSO
             </span>
             <ArrowRight className="w-6 h-6 flex-shrink-0" />
           </motion.a>
@@ -163,19 +163,19 @@ export function PricingSection() {
           <div className="grid grid-cols-2 gap-y-3 text-sm text-slate-700 font-semibold">
             <div className="flex items-center justify-center gap-2 pr-2 border-r border-slate-200">
               <Zap className="w-4 h-4 text-[#E8A23D]" />
-              Acceso inmediato
+              Accesso immediato
             </div>
             <div className="flex items-center justify-center gap-2 pl-2">
               <CreditCard className="w-4 h-4 text-[#4A7CB5]" />
-              Pago único
+              Pagamento unico
             </div>
             <div className="flex items-center justify-center gap-2 pr-2 border-r border-slate-200">
               <ShieldCheck className="w-4 h-4 text-[#4A7CB5]" />
-              Garantía de 7 días
+              Garanzia di 7 giorni
             </div>
             <div className="flex items-center justify-center gap-2 pl-2">
               <Lock className="w-4 h-4 text-[#E8A23D]" />
-              Pago seguro
+              Pagamento sicuro
             </div>
           </div>
         </div>

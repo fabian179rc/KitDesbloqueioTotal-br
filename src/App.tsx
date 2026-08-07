@@ -5,13 +5,13 @@ import { useScreenInit } from "./useScreenInit";
 import { getCheckoutUrl } from "./utils/checkoutUrl";
 const META_PIXEL_ID = "";
 const PAGE_TITLE =
-  "Megapack SIBO: El Método Anti-Inflamación | Sistema completo para tu digestión";
+  "Gran Pacchetto Meccanica Kids | La Passione per i Motori di Tuo Figlio, Accesa da Oggi";
 const PAGE_DESC =
-  "Guías, protocolos, listas de compras, planners, checklists y reemplazos inteligentes para ordenar tu digestión y desinflamar tu abdomen. PDFs editables, imprimibles e interactivos.";
+  "Guida illustrata, flashcards, poster, missioni e diploma: tutto stampabile, tutto pronto, tutto pensato per imparare giocando. Per bambini dai 6 ai 12 anni.";
 const HERO_IMAGE = `${import.meta.env.BASE_URL}megapack-sibo-mockup.png`;
 const HERO_IMAGE_MOBILE = `${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`;
 
-const SITE_URL = "https://sibo.tupuntodigital.shop";
+const SITE_URL = "https://piccoloingegnere.tupuntodigital.shop";
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(
     `meta[${attr}="${key}"]`,
@@ -43,7 +43,7 @@ export function App() {
   useScreenInit();
   useEffect(() => {
     if (typeof document === "undefined") return;
-    document.documentElement.lang = "es";
+    document.documentElement.lang = "it";
     document.title = PAGE_TITLE;
     addLink("preconnect", "/cdn.magicpatterns.com", {
       crossorigin: "",
@@ -74,13 +74,13 @@ export function App() {
     setMeta("property", "og:type", "website");
     setMeta("property", "og:title", PAGE_TITLE);
     setMeta("property", "og:description", PAGE_DESC);
-    setMeta("property", "og:locale", "es_LA");
+    setMeta("property", "og:locale", "it_IT");
     setMeta("property", "og:image", absoluteUrl(HERO_IMAGE));
     setMeta("property", "og:url", SITE_URL);
     setMeta(
       "property",
       "og:site_name",
-      "Megapack SIBO",
+      "Gran Pacchetto Meccanica Kids",
     );
     setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:image", absoluteUrl(HERO_IMAGE));
@@ -94,17 +94,17 @@ export function App() {
       ld.textContent = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
-        name: "Megapack SIBO: El Método Anti-Inflamación",
+        name: "Gran Pacchetto Meccanica Kids",
         description: PAGE_DESC,
         image: absoluteUrl(HERO_IMAGE),
         brand: {
           "@type": "Brand",
-          name: "Megapack SIBO",
+          name: "Gran Pacchetto Meccanica Kids",
         },
         offers: {
           "@type": "Offer",
-          price: "19990",
-          priceCurrency: "ARS",
+          price: "19.90",
+          priceCurrency: "EUR",
           availability: "https://schema.org/InStock",
           url: getCheckoutUrl(),
         },
@@ -121,28 +121,28 @@ export function App() {
         "@type": "FAQPage",
         mainEntity: [
           {
-            q: "¿Es un producto físico o digital?",
-            a: "Es un producto 100% digital. Recibís acceso inmediato al material después de la compra para descargarlo y usarlo desde tu computadora, tablet o celular.",
+            q: "È un prodotto fisico o digitale?",
+            a: "È un prodotto 100% digitale. Riceverai l'accesso immediato al materiale dopo l'acquisto per scaricarlo e stamparlo da casa tua.",
           },
           {
-            q: "¿Sirve si estoy en tratamiento médico?",
-            a: "Sí. El Megapack es un sistema de organización alimentaria y guía práctica. No reemplaza la indicación de tu médico o nutricionista, sino que la complementa con herramientas concretas para el día a día.",
+            q: "Per che età è adatto?",
+            a: "Il Gran Pacchetto è progettato per bambini dai 6 ai 12 anni. I contenuti sono spiegati con un linguaggio semplice e progressivo.",
           },
           {
-            q: "¿Necesito saber cocinar para usarlo?",
-            a: "No. El recetario tiene platos de 5 ingredientes o menos, pensados para personas sin tiempo y sin experiencia culinaria avanzada.",
+            q: "Devo avere conoscenze meccaniche per usarlo?",
+            a: "No. Il kit è pensato anche per genitori che non sanno nulla di meccanica. Le spiegazioni sono chiare e guidano sia l'adulto che il bambino.",
           },
           {
-            q: "¿Cuándo recibo el acceso?",
-            a: "De forma inmediata. En menos de 5 minutos después de completar tu pago recibís todo el material en tu correo electrónico.",
+            q: "Quando ricevo l'accesso?",
+            a: "Immediatamente dopo il pagamento. Riceverai un link per scaricare tutti i file PDF direttamente nella tua email.",
           },
           {
-            q: "¿El precio es en pesos argentinos?",
-            a: "Sí. El precio es de $19.990 ARS, pago único, sin suscripción ni cargos adicionales.",
+            q: "Funziona senza stampante?",
+            a: "Sì. Puoi usare la guida principale direttamente dallo schermo. Alcuni bonus (flashcards, poster, diploma) sono pensati per la stampa ma possono essere usati anche in digitale.",
           },
           {
-            q: "¿Reemplaza una consulta médica o nutricional?",
-            a: "No. El Megapack es una herramienta educativa y de organización. Siempre es recomendable trabajar en paralelo con un profesional de la salud.",
+            q: "Il contenuto è in italiano?",
+            a: "Sì, tutto il materiale è scritto in italiano corretto, con un linguaggio adatto ai bambini e accessibile per i genitori.",
           },
         ].map((item) => ({
           "@type": "Question",

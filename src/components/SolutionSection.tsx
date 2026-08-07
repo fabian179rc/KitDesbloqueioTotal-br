@@ -6,12 +6,12 @@ export function SolutionSection() {
       <div className="container mx-auto px-4 max-w-4xl text-center">
         <div className="mb-6">
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
-            LA SOLUCIÓN — SISTEMA TODO EN UNO
+            LA SOLUZIONE CHE ASPETTAVI — UN SISTEMA COMPLETO IN UNO
           </span>
           <h2 className="font-heading md:text-5xl font-bold text-[#2f3a2c] mb-6 max-w-3xl mx-auto text-[24px]">
-            El sistema completo para entender qué te inflama y{" "}
+            Gran Pacchetto Meccanica Kids:{" "}
             <span className="text-[#5C6851]">
-              comer con libertad en cualquier situación de tu vida real
+              un sistema completo, pronto da usare dal primo giorno
             </span>
           </h2>
         </div>
@@ -42,7 +42,7 @@ export function SolutionSection() {
             />
             <img
               src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
-              alt="Megapack SIBO: El Método Anti-Inflamación"
+              alt="Gran Pacchetto Meccanica Kids"
               width={1254}
               height={1254}
               loading="lazy"
@@ -54,10 +54,10 @@ export function SolutionSection() {
 
         <div className="bg-white/60 border border-amber-100 text-[#2f3a2c] rounded-3xl p-6 md:p-8 shadow-sm">
           <p className="md:text-xl font-medium text-slate-700 text-[16px]">
-            Ese no es un problema de voluntad. Es un problema de no tener el
-            sistema correcto. Un sistema de trabajo completo, desde entender
-            qué te inflama hasta comer con libertad en cualquier situación de
-            tu vida real.
+            Con questo sistema potrai insegnare senza preparazione, mantenere
+            alta l'attenzione, creare un ricordo indelebile e spiegare
+            concetti complessi in modo semplice — tutto pronto da usare dal
+            primo giorno.
           </p>
         </div>
       </div>
