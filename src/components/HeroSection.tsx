@@ -45,9 +45,9 @@ export function HeroSection() {
           }}
           className="font-heading md:text-5xl font-extrabold text-[#2f3a2c] mb-0 text-[21px] leading-[1.15] md:leading-[normal]"
         >
-          La Passione per i Motori di Tuo Figlio,
+          La Passione per i Motori
           <br />
-          <span className="text-[#B85C43]">Accesa.</span>
+          <span className="text-[#B85C43]">di Tuo Figlio, Accesa.</span>
           <br />
           Da Oggi.
         </motion.h1>
