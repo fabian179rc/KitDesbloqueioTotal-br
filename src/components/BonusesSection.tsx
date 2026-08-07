@@ -1,37 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Gift } from "lucide-react";
-import { BonusCoverPlaceholder } from "./BonusCoverPlaceholder";
 const bonuses = [
   {
     num: 1,
     title: "Checklist de Arranque SIBO en 30 Minutos",
     desc: "Llegás al primer día con una estructura clara, sin perderte ni depender solo de tu memoria. Hoja de ruta de 72 horas incluida.",
-    emoji: "✅",
+    image: "/bono1.webp",
   },
   {
     num: 2,
     title: "Guía Express de Etiquetas Anti-Inflamación",
     desc: "Sabés exactamente qué mirar y qué evitar en cada producto del súper. Trabajás con más criterio en cada compra.",
-    emoji: "🏷️",
+    image: "/bono2.webp",
   },
   {
     num: 3,
     title: "Planner de Comidas Sin Estrés",
     desc: "Tus semanas se ven más claras, más ordenadas y más fáciles de sostener sin improvisar ni caer en lo primero que encontrás.",
-    emoji: "🗓️",
+    image: "/bono3.webp",
   },
   {
     num: 4,
     title: "Tarjetas Visuales de Porciones y Combinaciones",
     desc: "Cada comida termina con proteína, base y verdura definida. Sin pesar, sin contar calorías, sin drama.",
-    emoji: "🍽️",
+    image: "/bono4.webp",
   },
   {
     num: 5,
     title: "Kit de Emergencia para Comer Fuera de Casa",
     desc: "Presentás tu proceso con más seguridad y tu entorno entiende mejor cómo acompañarte sin presiones.",
-    emoji: "🧳",
+    image: "/bono5.webp",
   },
 ];
 
@@ -70,8 +68,13 @@ export function BonusesSection() {
               }}
               className="bg-white border border-slate-200 rounded-2xl p-3 shadow-sm"
             >
-              <div className="relative rounded-xl overflow-hidden mb-3 h-56 bg-[#f4efe2] flex items-center justify-center">
-                <BonusCoverPlaceholder emoji={b.emoji} num={b.num} />
+              <div className="relative rounded-xl overflow-hidden mb-3 bg-[#f4efe2] flex items-center justify-center py-6 sm:py-0">
+                <img
+                  src={b.image}
+                  alt={b.title}
+                  className="w-full h-auto object-contain"
+                  loading="lazy"
+                />
                 <span className="absolute top-2.5 left-2.5 bg-rose-500 text-white font-bold text-[11px] tracking-wide uppercase px-2.5 py-1 rounded-md shadow-sm">
                   Bono {b.num}
                 </span>
@@ -80,26 +83,10 @@ export function BonusesSection() {
                 </span>
               </div>
               <div className="px-2 pb-2">
-                <h3 className="hidden md:block font-heading font-bold text-[#2f3a2c] text-[15px] mb-1">
-                  {b.title}
-                </h3>
                 <p className="text-slate-600 text-sm leading-snug">{b.desc}</p>
               </div>
             </motion.div>
           ))}
-        </div>
-
-        <div className="text-center px-6 py-10 bg-white/60 border border-amber-100 rounded-3xl">
-          <Gift className="w-9 h-9 text-[#d4a017] mx-auto mb-4" />
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#5C6851] mb-2">
-            Todo incluido en
-          </p>
-          <h3 className="font-heading font-bold text-[#2f3a2c] text-3xl md:text-4xl mb-3">
-            el Megapack SIBO: El Método Anti-Inflamación
-          </h3>
-          <p className="text-slate-600">
-            Los 5 bonos son gratis con tu compra hoy.
-          </p>
         </div>
       </div>
     </section>

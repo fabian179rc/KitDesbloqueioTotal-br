@@ -65,7 +65,7 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.2,
           }}
-          className="mx-auto mb-0 w-full max-w-[400px] sm:max-w-md md:max-w-[836px]"
+          className="mx-auto mb-4 sm:mb-0 w-full max-w-[400px] sm:max-w-md md:max-w-[836px]"
         >
           <picture>
             <source
@@ -100,7 +100,7 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.3,
           }}
-          className="max-w-2xl mx-auto mt-0 mb-2"
+          className="max-w-2xl mx-auto mt-0 mb-4 sm:mb-2"
         >
           <p className="hidden md:block text-slate-600 md:text-lg leading-relaxed">
             Guías, protocolos, listas de compras, planners, checklists y
@@ -111,7 +111,7 @@ export function HeroSection() {
             🗂️ Ordená tus comidas · 🎯 Identificá qué te inflama · ✅ Comé
             con libertad
           </p>
-          <p className="text-slate-500 text-[11px] md:text-sm mt-1 md:mt-2">
+          <p className="text-slate-500 text-[11px] md:text-sm mt-2 md:mt-2">
             Sin dietas imposibles. Sin adivinar qué te cayó mal.
           </p>
         </motion.div>
@@ -129,7 +129,7 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.4,
           }}
-          className="flex flex-col items-center mt-3"
+          className="flex flex-col items-center mt-6 sm:mt-3"
         >
           <motion.a
             href="#comprar"
@@ -140,12 +140,12 @@ export function HeroSection() {
             whileTap={{
               scale: 0.98,
             }}
-            className="flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold px-5 sm:px-8 py-4 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-5 text-[13px] sm:text-[16px] whitespace-nowrap"
+            className="flex items-center justify-center gap-2 sm:gap-3 w-full sm:w-auto bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold px-5 sm:px-8 py-4 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-7 sm:mb-5 text-[13px] sm:text-[16px] whitespace-nowrap"
           >
             🚀 SÍ, QUIERO EL MEGAPACK AHORA
           </motion.a>
 
-          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-0.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-xs sm:text-sm font-medium text-slate-600">
+          <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-xs sm:text-sm font-medium text-slate-600">
             <span className="flex items-center justify-center gap-1 sm:gap-1.5">
               <Star
                 className="w-3 h-3 sm:w-4 sm:h-4 fill-[#d4a017] text-[#d4a017]"

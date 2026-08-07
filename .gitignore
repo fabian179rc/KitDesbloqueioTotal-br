@@ -40,7 +40,15 @@ dist-ssr
 /bon3.webp
 /bon4.webp
 /bon5.webp
+/Bono1.webp
+/Bono2.webp
+/Bono3.webp
+/Bono4.webp
+/Bono5.webp
 /mockup-web.png
 /Mockup-mobile.png
 /mockup-web2.png
 /Mockup-mobile1.png
+
+# Vite build cache
+.vite/

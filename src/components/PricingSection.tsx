@@ -67,9 +67,7 @@ export function PricingSection() {
         </span>
         <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
           Accedé hoy al{" "}
-          <em className="italic font-bold text-[#f0e6d2]">
-            Megapack completo
-          </em>
+          <em className="italic font-bold text-[#f0e6d2]">Megapack completo</em>
         </h2>
 
         <div className="relative inline-block mb-2 w-full max-w-md mx-auto">
@@ -125,9 +123,7 @@ export function PricingSection() {
           <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
             $19.990 ARS
           </div>
-          <span className="inline-block bg-slate-100 text-slate-700 text-sm font-medium px-4 py-1.5 rounded-full mb-5">
-            Pagás en un solo pago, accedés de forma inmediata
-          </span>
+
           <p className="text-[#B85C43] font-semibold text-base leading-snug mb-6">
             🔥 ¡Última oportunidad! El precio sube al finalizar el contador.
           </p>

@@ -24,10 +24,12 @@
 ### Task 1: Placeholder image components
 
 **Files:**
+
 - Create: `src/components/ProductCoverPlaceholder.tsx`
 - Create: `src/components/BonusCoverPlaceholder.tsx`
 
 **Interfaces:**
+
 - Produces: `ProductCoverPlaceholder({ className?: string })` — a `div` filling its parent's width with `aspect-square`, used later by Tasks 3, 5, 9 in place of the old `<picture>` mockup.
 - Produces: `BonusCoverPlaceholder({ emoji: string; num: number })` — a `div` filling its parent (`w-full h-full`), used later by Task 8 in place of the old `<img>` inside each bonus card.
 
@@ -75,7 +77,10 @@ interface BonusCoverPlaceholderProps {
   num: number;
 }
 
-export function BonusCoverPlaceholder({ emoji, num }: BonusCoverPlaceholderProps) {
+export function BonusCoverPlaceholder({
+  emoji,
+  num,
+}: BonusCoverPlaceholderProps) {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#f4efe2] to-[#e8ddc0] text-center p-4">
       <span className="text-4xl mb-2" aria-hidden="true">
@@ -106,23 +111,27 @@ git commit -m "feat: add placeholder image components for Megapack SIBO mockups"
 ### Task 2: Checkout URL
 
 **Files:**
+
 - Modify: `src/utils/checkoutUrl.ts:1-2`
 
 **Interfaces:**
+
 - Consumes: nothing new.
 - Produces: `getCheckoutUrl()` unchanged in shape, now returns the SIBO checkout base URL — consumed later by `PricingSection.tsx` and `FinalPricingCTA.tsx` (already wired, no change needed there).
 
 - [ ] **Step 1: Replace the checkout base URL**
 
 Replace:
+
 ```ts
-const CHECKOUT_BASE_URL =
-  'https://bio-hack-peso-ideal.impultienda.ar/checkout';
+const CHECKOUT_BASE_URL = "https://bio-hack-peso-ideal.impultienda.ar/checkout";
 ```
+
 With:
+
 ```ts
 const CHECKOUT_BASE_URL =
-  'https://megapack-sibo-el-metodo-anti-inflamacion.impultienda.ar/checkout';
+  "https://megapack-sibo-el-metodo-anti-inflamacion.impultienda.ar/checkout";
 ```
 
 - [ ] **Step 2: Type-check**
@@ -142,14 +151,17 @@ git commit -m "fix: point checkout button to Megapack SIBO checkout URL"
 ### Task 3: `HeroSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/HeroSection.tsx`
 
 **Interfaces:**
+
 - Consumes: `ProductCoverPlaceholder` from Task 1 (`import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";`).
 
 - [ ] **Step 1: Add the placeholder import**
 
 Add near the top, after the existing imports:
+
 ```tsx
 import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 ```
@@ -157,10 +169,13 @@ import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 - [ ] **Step 2: Replace the badge text**
 
 Replace:
+
 ```
 ✨ Protocolo Completo — Biohacking & GLP-1
 ```
+
 With:
+
 ```
 ✨ Sistema Completo — Método Anti-Inflamación
 ```
@@ -168,6 +183,7 @@ With:
 - [ ] **Step 3: Replace the H1**
 
 Replace:
+
 ```tsx
           ¿Y si el verdadero problema empezara
           <br />
@@ -175,7 +191,9 @@ Replace:
             cuando termines el tratamiento?
           </span>
 ```
+
 With:
+
 ```tsx
           Tu digestión ordenada,
           <br />
@@ -187,32 +205,36 @@ With:
 - [ ] **Step 4: Replace the mockup `<picture>` block with the placeholder**
 
 Replace:
+
 ```tsx
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
-              alt="Protocolo GLP-1 Sin Rebote"
-              width={1254}
-              height={1254}
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              className="w-full h-auto rounded-2xl"
-            />
-          </picture>
+<picture>
+  <source
+    media="(min-width: 768px)"
+    srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
+  />
+  <img
+    src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
+    alt="Protocolo GLP-1 Sin Rebote"
+    width={1254}
+    height={1254}
+    loading="eager"
+    fetchPriority="high"
+    decoding="async"
+    className="w-full h-auto rounded-2xl"
+  />
+</picture>
 ```
+
 With:
+
 ```tsx
-          <ProductCoverPlaceholder />
+<ProductCoverPlaceholder />
 ```
 
 - [ ] **Step 5: Replace the description paragraphs**
 
 Replace:
+
 ```tsx
           <p className="hidden md:block text-slate-600 md:text-lg leading-relaxed">
             El manual técnico que tu médico no te dio — para transformarte de
@@ -232,7 +254,9 @@ Replace:
             Sin horas en el gimnasio. Sin dietas imposibles.
           </p>
 ```
+
 With:
+
 ```tsx
           <p className="hidden md:block text-slate-600 md:text-lg leading-relaxed">
             Guías, protocolos, listas de compras, planners, checklists y
@@ -251,10 +275,13 @@ With:
 - [ ] **Step 6: Replace the CTA button label**
 
 Replace:
+
 ```
 🚀 QUIERO EL PROTOCOLO COMPLETO
 ```
+
 With:
+
 ```
 🚀 SÍ, QUIERO EL MEGAPACK AHORA
 ```
@@ -262,10 +289,13 @@ With:
 - [ ] **Step 7: Replace the trust bar labels**
 
 Replace:
+
 ```tsx
               4.9/5 — Reseñas verificadas
 ```
+
 With:
+
 ```tsx
               4.9/5 — Valoración de usuarias
 ```
@@ -289,62 +319,69 @@ git commit -m "feat: reskin HeroSection copy for Megapack SIBO"
 ### Task 4: `ProblemSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/ProblemSection.tsx:3-40`
 
 - [ ] **Step 1: Replace the `situations` array**
 
 Replace:
+
 ```tsx
 const situations = [
-{
-  emoji: '😰',
-  title: 'El Espejo que No Miente',
-  desc: 'Bajás kilos, pero tu piel cuelga y tu cara se ve demacrada. El "rostro hundido" del tratamiento GLP-1 ya apareció.'
-},
-{
-  emoji: '😩',
-  title: 'La Fuerza que Desaparece',
-  desc: 'Subir escaleras te agota. Cargás menos. Estás perdiendo músculo junto con la grasa.'
-},
-{
-  emoji: '⚖️',
-  title: 'El Miedo al Rebote',
-  desc: '¿Qué pasa cuando dejes la inyección? ¿Tu cuerpo va a recuperar todo — y más?'
-},
-{
-  emoji: '⏱️',
-  title: 'La Inversión que No Rinde',
-  desc: 'Pagás $200–$400 USD por mes en el fármaco sin obtener el cuerpo atlético que imaginabas.'
-}];
+  {
+    emoji: "😰",
+    title: "El Espejo que No Miente",
+    desc: 'Bajás kilos, pero tu piel cuelga y tu cara se ve demacrada. El "rostro hundido" del tratamiento GLP-1 ya apareció.',
+  },
+  {
+    emoji: "😩",
+    title: "La Fuerza que Desaparece",
+    desc: "Subir escaleras te agota. Cargás menos. Estás perdiendo músculo junto con la grasa.",
+  },
+  {
+    emoji: "⚖️",
+    title: "El Miedo al Rebote",
+    desc: "¿Qué pasa cuando dejes la inyección? ¿Tu cuerpo va a recuperar todo — y más?",
+  },
+  {
+    emoji: "⏱️",
+    title: "La Inversión que No Rinde",
+    desc: "Pagás $200–$400 USD por mes en el fármaco sin obtener el cuerpo atlético que imaginabas.",
+  },
+];
 ```
+
 With:
+
 ```tsx
 const situations = [
-{
-  emoji: '🗂️',
-  title: 'Información desordenada',
-  desc: 'Artículos sueltos, videos contradictorios y listas en distintos lados. Cada vez que necesitás orientarte, perdés tiempo y terminás más confundida.'
-},
-{
-  emoji: '⏱️',
-  title: 'Comidas que toman demasiada energía mental',
-  desc: 'Cada salida, cada almuerzo en el trabajo o cada cena en familia se convierte en horas de cálculo y ansiedad anticipatoria.'
-},
-{
-  emoji: '📌',
-  title: 'Síntomas que quedan sin resolver',
-  desc: 'Detectás que algo te cae mal, pero no siempre queda claro cuál fue el alimento, en qué cantidad y cómo evitarlo sin resignar todo.'
-},
-{
-  emoji: '🎯',
-  title: 'Sensación de que nada funciona de verdad',
-  desc: 'Probaste eliminar, restringir, suplementar. Y aun así seguís terminando el día desabrochándote el pantalón por el dolor.'
-}];
+  {
+    emoji: "🗂️",
+    title: "Información desordenada",
+    desc: "Artículos sueltos, videos contradictorios y listas en distintos lados. Cada vez que necesitás orientarte, perdés tiempo y terminás más confundida.",
+  },
+  {
+    emoji: "⏱️",
+    title: "Comidas que toman demasiada energía mental",
+    desc: "Cada salida, cada almuerzo en el trabajo o cada cena en familia se convierte en horas de cálculo y ansiedad anticipatoria.",
+  },
+  {
+    emoji: "📌",
+    title: "Síntomas que quedan sin resolver",
+    desc: "Detectás que algo te cae mal, pero no siempre queda claro cuál fue el alimento, en qué cantidad y cómo evitarlo sin resignar todo.",
+  },
+  {
+    emoji: "🎯",
+    title: "Sensación de que nada funciona de verdad",
+    desc: "Probaste eliminar, restringir, suplementar. Y aun así seguís terminando el día desabrochándote el pantalón por el dolor.",
+  },
+];
 ```
 
 - [ ] **Step 2: Replace the section heading copy**
 
 Replace:
+
 ```tsx
           <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 text-[#2f3a2c] uppercase">
             ¿Te reconocés en esto?
@@ -357,15 +394,17 @@ Replace:
             probablemente vivís alguna de estas situaciones:
           </p>
 ```
+
 With:
+
 ```tsx
           <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 text-[#2f3a2c] uppercase">
             ¿Te reconocés en esto?
           </h2>
-          <p className="text-xl font-bold text-[#5C6851] mb-4 italic">
-            Sabés identificar cuándo te inflama algo, pero cada comida es
-            adivinar qué estuvo mal.
-          </p>
+          // <p className="text-xl font-bold text-[#5C6851] mb-4 italic">
+          //   Sabés identificar cuándo te inflama algo, pero cada comida es
+          //   adivinar qué estuvo mal.
+          // </p>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
             Si tenés SIBO diagnosticado o síntomas compatibles como hinchazón,
             gases, distensión abdominal o miedo a comer, probablemente ya
@@ -390,14 +429,17 @@ git commit -m "feat: reskin ProblemSection copy for Megapack SIBO"
 ### Task 5: `SolutionSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/SolutionSection.tsx`
 
 **Interfaces:**
+
 - Consumes: `ProductCoverPlaceholder` from Task 1.
 
 - [ ] **Step 1: Add the placeholder import**
 
 Add after `import { motion } from "framer-motion";`:
+
 ```tsx
 import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 ```
@@ -405,6 +447,7 @@ import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 - [ ] **Step 2: Replace the badge and heading**
 
 Replace:
+
 ```tsx
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             LA SOLUCIÓN — SISTEMA TODO EN UNO
@@ -416,7 +459,9 @@ Replace:
             </span>
           </h2>
 ```
+
 With:
+
 ```tsx
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             LA SOLUCIÓN — SISTEMA TODO EN UNO
@@ -432,56 +477,60 @@ With:
 - [ ] **Step 3: Replace the mockup `<picture>` block with the placeholder**
 
 Replace:
+
 ```tsx
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
-              alt="Protocolo GLP-1 Sin Rebote"
-              width={1254}
-              height={1254}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-auto max-w-2xl mx-auto rounded-2xl shadow-xl shadow-navy/5 border border-slate-100"
-            />
-          </picture>
+<picture>
+  <source
+    media="(min-width: 768px)"
+    srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
+  />
+  <img
+    src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
+    alt="Protocolo GLP-1 Sin Rebote"
+    width={1254}
+    height={1254}
+    loading="lazy"
+    decoding="async"
+    className="w-full h-auto max-w-2xl mx-auto rounded-2xl shadow-xl shadow-navy/5 border border-slate-100"
+  />
+</picture>
 ```
+
 With:
+
 ```tsx
-          <ProductCoverPlaceholder className="max-w-2xl mx-auto shadow-xl shadow-navy/5 border-slate-100" />
+<ProductCoverPlaceholder className="max-w-2xl mx-auto shadow-xl shadow-navy/5 border-slate-100" />
 ```
 
 - [ ] **Step 4: Replace the closing paragraph card**
 
 Replace:
+
 ```tsx
-          <p className="md:text-xl font-medium text-slate-700 text-[16px]">
-            <span className="md:hidden">
-              Hasta el 40% del peso perdido con GLP-1 puede ser músculo. El
-              "Punto Dulce Metabólico" ordena a tu cuerpo quemar grasa y
-              blindar el músculo — la diferencia entre "enfermo y flaco" y
-              "atlético y definido".
-            </span>
-            <span className="hidden md:inline">
-              El problema no es el fármaco: es no tener el Manual de
-              Ingeniería. Hasta el 40% del peso perdido con GLP-1 puede ser
-              masa muscular. Existe un "Punto Dulce Metabólico" que le ordena
-              a tu cuerpo quemar grasa mientras blinda el músculo — la
-              diferencia entre verte "enfermo y flaco" o "atlético y definido".
-            </span>
-          </p>
+<p className="md:text-xl font-medium text-slate-700 text-[16px]">
+  <span className="md:hidden">
+    Hasta el 40% del peso perdido con GLP-1 puede ser músculo. El "Punto Dulce
+    Metabólico" ordena a tu cuerpo quemar grasa y blindar el músculo — la
+    diferencia entre "enfermo y flaco" y "atlético y definido".
+  </span>
+  <span className="hidden md:inline">
+    El problema no es el fármaco: es no tener el Manual de Ingeniería. Hasta el
+    40% del peso perdido con GLP-1 puede ser masa muscular. Existe un "Punto
+    Dulce Metabólico" que le ordena a tu cuerpo quemar grasa mientras blinda el
+    músculo — la diferencia entre verte "enfermo y flaco" o "atlético y
+    definido".
+  </span>
+</p>
 ```
+
 With:
+
 ```tsx
-          <p className="md:text-xl font-medium text-slate-700 text-[16px]">
-            Ese no es un problema de voluntad. Es un problema de no tener el
-            sistema correcto. Un sistema de trabajo completo, desde entender
-            qué te inflama hasta comer con libertad en cualquier situación de
-            tu vida real.
-          </p>
+<p className="md:text-xl font-medium text-slate-700 text-[16px]">
+  Ese no es un problema de voluntad. Es un problema de no tener el sistema
+  correcto. Un sistema de trabajo completo, desde entender qué te inflama hasta
+  comer con libertad en cualquier situación de tu vida real.
+</p>
 ```
 
 - [ ] **Step 5: Type-check**
@@ -501,11 +550,13 @@ git commit -m "feat: reskin SolutionSection copy for Megapack SIBO"
 ### Task 6: `FeaturesSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/FeaturesSection.tsx:4-30`
 
 - [ ] **Step 1: Replace the `features` array**
 
 Replace:
+
 ```tsx
 const features = [
   {
@@ -526,7 +577,9 @@ const features = [
   },
 ];
 ```
+
 With:
+
 ```tsx
 const features = [
   {
@@ -551,10 +604,13 @@ const features = [
 - [ ] **Step 2: Replace the section heading**
 
 Replace:
+
 ```
 ¿QUÉ VAS A LOGRAR CON ESTE PROTOCOLO?
 ```
+
 With:
+
 ```
 ¿QUÉ VAS A LOGRAR CON ESTE SISTEMA?
 ```
@@ -576,91 +632,102 @@ git commit -m "feat: reskin FeaturesSection copy for Megapack SIBO"
 ### Task 7: `ContentSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/ContentSection.tsx`
 
 - [ ] **Step 1: Replace the `temas` array**
 
 Replace:
+
 ```tsx
 const temas = [
-  { emoji: '🔬', label: 'Fisiología GLP-1' },
-  { emoji: '🥩', label: 'Nutrición Proteica' },
-  { emoji: '🏋️', label: 'Entrenamiento EEM' },
-  { emoji: '🧬', label: 'Péptidos BPC-157' },
-  { emoji: '✨', label: 'Anti Rostro Hundido' },
-  { emoji: '🧪', label: 'GHK-Cu Colágeno' },
-  { emoji: '⚡', label: 'Electrolitos' },
-  { emoji: '📊', label: 'Composición Corporal' },
-  { emoji: '🔄', label: 'Exit Strategy' },
-  { emoji: '🩸', label: 'Análisis de sangre' },
-  { emoji: '💊', label: 'TB-500 Recuperación' },
-  { emoji: '🧠', label: 'Flexibilidad Metabólica' },
+  { emoji: "🔬", label: "Fisiología GLP-1" },
+  { emoji: "🥩", label: "Nutrición Proteica" },
+  { emoji: "🏋️", label: "Entrenamiento EEM" },
+  { emoji: "🧬", label: "Péptidos BPC-157" },
+  { emoji: "✨", label: "Anti Rostro Hundido" },
+  { emoji: "🧪", label: "GHK-Cu Colágeno" },
+  { emoji: "⚡", label: "Electrolitos" },
+  { emoji: "📊", label: "Composición Corporal" },
+  { emoji: "🔄", label: "Exit Strategy" },
+  { emoji: "🩸", label: "Análisis de sangre" },
+  { emoji: "💊", label: "TB-500 Recuperación" },
+  { emoji: "🧠", label: "Flexibilidad Metabólica" },
 ];
 ```
+
 With:
+
 ```tsx
 const temas = [
-  { emoji: '🔍', label: 'Rescate en Crisis' },
-  { emoji: '🚦', label: 'Semáforo de Alimentos' },
-  { emoji: '📋', label: '3 Fases Anti-Inflamación' },
-  { emoji: '🔄', label: 'Intercambios Rápidos' },
-  { emoji: '🍳', label: 'Recetas 5 Ingredientes' },
-  { emoji: '📊', label: 'Diario de Síntomas' },
-  { emoji: '🛒', label: 'Súper Argentino' },
-  { emoji: '✅', label: 'Checklist de Arranque' },
-  { emoji: '🏷️', label: 'Lectura de Etiquetas' },
-  { emoji: '🗓️', label: 'Planner Semanal' },
-  { emoji: '🍽️', label: 'Porciones Visuales' },
-  { emoji: '🧳', label: 'Comer Fuera de Casa' },
+  { emoji: "🔍", label: "Rescate en Crisis" },
+  { emoji: "🚦", label: "Semáforo de Alimentos" },
+  { emoji: "📋", label: "3 Fases Anti-Inflamación" },
+  { emoji: "🔄", label: "Intercambios Rápidos" },
+  { emoji: "🍳", label: "Recetas 5 Ingredientes" },
+  { emoji: "📊", label: "Diario de Síntomas" },
+  { emoji: "🛒", label: "Súper Argentino" },
+  { emoji: "✅", label: "Checklist de Arranque" },
+  { emoji: "🏷️", label: "Lectura de Etiquetas" },
+  { emoji: "🗓️", label: "Planner Semanal" },
+  { emoji: "🍽️", label: "Porciones Visuales" },
+  { emoji: "🧳", label: "Comer Fuera de Casa" },
 ];
 ```
 
 - [ ] **Step 2: Replace the `adaptabilidad` array**
 
 Replace:
+
 ```tsx
 const adaptabilidad = [
-  { emoji: '📚', label: 'Referencias PubMed' },
-  { emoji: '🚫', label: 'Sin opinión de internet' },
-  { emoji: '🌎', label: 'Toda Latinoamérica' },
+  { emoji: "📚", label: "Referencias PubMed" },
+  { emoji: "🚫", label: "Sin opinión de internet" },
+  { emoji: "🌎", label: "Toda Latinoamérica" },
 ];
 ```
+
 With:
+
 ```tsx
 const adaptabilidad = [
-  { emoji: '🇦🇷', label: 'Adaptado a supermercados argentinos' },
-  { emoji: '📋', label: 'Protocolos prácticos y listos para aplicar' },
-  { emoji: '👩', label: 'Pensado para mujeres con SIBO' },
+  { emoji: "🇦🇷", label: "Adaptado a supermercados argentinos" },
+  { emoji: "📋", label: "Protocolos prácticos y listos para aplicar" },
+  { emoji: "👩", label: "Pensado para mujeres con SIBO" },
 ];
 ```
 
 - [ ] **Step 3: Replace the `incluye` array**
 
 Replace:
+
 ```tsx
 const incluye = [
-  '🧬 Módulo 1 — La Trampa del GLP-1: por qué perdés músculo y cómo revertirlo',
-  '🥩 Módulo 2 — Nutrición de Densidad Extrema para saciedad temprana',
-  '🏋️ Módulo 3 — Entrenamiento de Estímulo Mínimo (30 min, 3x semana)',
-  '💉 Módulo 4 — Biohacking de Soporte: péptidos para piel y articulaciones',
-  '🔄 Módulo 5 — El Plan de Salida: cómo dejar el fármaco sin rebote',
+  "🧬 Módulo 1 — La Trampa del GLP-1: por qué perdés músculo y cómo revertirlo",
+  "🥩 Módulo 2 — Nutrición de Densidad Extrema para saciedad temprana",
+  "🏋️ Módulo 3 — Entrenamiento de Estímulo Mínimo (30 min, 3x semana)",
+  "💉 Módulo 4 — Biohacking de Soporte: péptidos para piel y articulaciones",
+  "🔄 Módulo 5 — El Plan de Salida: cómo dejar el fármaco sin rebote",
 ];
 ```
+
 With:
+
 ```tsx
 const incluye = [
-  '🔍 Protocolo de Rescate 24 Horas — Llegás a una crisis con estructura, sin improvisar ni entrar en pánico',
-  '⚠️ Semáforo de Supermercado Argentino — Listas listas para adaptar a cualquier góndola del Coto, Jumbo o Carrefour',
-  '📋 Guía de las 3 Fases Anti-Inflamación — No arrancás de cero, seguís el mapa en minutos',
-  '🔎 Matriz de Intercambio Rápido — Reemplazos listos para aplicar hoy con lo que ya tenés en casa',
-  '🚨 Recetario Cero Estrés — Platos de 5 ingredientes, claros y adaptados a Argentina',
-  '📊 Diario de Síntomas Express — Registros que generan claridad y aceleran tu reintroducción',
+  "🔍 Protocolo de Rescate 24 Horas — Llegás a una crisis con estructura, sin improvisar ni entrar en pánico",
+  "⚠️ Semáforo de Supermercado Argentino — Listas listas para adaptar a cualquier góndola del Coto, Jumbo o Carrefour",
+  "📋 Guía de las 3 Fases Anti-Inflamación — No arrancás de cero, seguís el mapa en minutos",
+  "🔎 Matriz de Intercambio Rápido — Reemplazos listos para aplicar hoy con lo que ya tenés en casa",
+  "🚨 Recetario Cero Estrés — Platos de 5 ingredientes, claros y adaptados a Argentina",
+  "📊 Diario de Síntomas Express — Registros que generan claridad y aceleran tu reintroducción",
 ];
 ```
 
 - [ ] **Step 4: Replace the badge, heading and subheading**
 
 Replace:
+
 ```tsx
           <span className="inline-flex items-center gap-2 px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             <PackageOpen className="w-4 h-4 text-[#d4a017]" />
@@ -675,7 +742,9 @@ Replace:
             en el proceso. 💪
           </p>
 ```
+
 With:
+
 ```tsx
           <span className="inline-flex items-center gap-2 px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             <PackageOpen className="w-4 h-4 text-[#d4a017]" />
@@ -694,81 +763,87 @@ With:
 - [ ] **Step 5: Replace the intro summary card**
 
 Replace:
+
 ```tsx
-          <p className="text-slate-700 text-[15px] md:text-lg leading-relaxed">
-            📚 El{' '}
-            <span className="font-bold text-[#5C6851]">
-              Protocolo GLP-1 Sin Rebote
-            </span>{' '}
-            reúne{' '}
-            <span className="font-bold text-[#2f3a2c]">150 páginas técnicas</span>,
-            organizadas en{' '}
-            <span className="font-semibold text-[#2f3a2c]">3 pilares del sistema</span>,
-            con{' '}
-            <span className="font-semibold text-[#2f3a2c]">14 protocolos listos</span>{' '}
-            para usar y{' '}
-            <span className="font-semibold text-[#2f3a2c]">5 bonos incluidos</span>{' '}
-            para preservar tu músculo, tu piel y blindar tu metabolismo.
-          </p>
+<p className="text-slate-700 text-[15px] md:text-lg leading-relaxed">
+  📚 El{" "}
+  <span className="font-bold text-[#5C6851]">Protocolo GLP-1 Sin Rebote</span>{" "}
+  reúne <span className="font-bold text-[#2f3a2c]">150 páginas técnicas</span>,
+  organizadas en{" "}
+  <span className="font-semibold text-[#2f3a2c]">3 pilares del sistema</span>,
+  con <span className="font-semibold text-[#2f3a2c]">14 protocolos listos</span>{" "}
+  para usar y{" "}
+  <span className="font-semibold text-[#2f3a2c]">5 bonos incluidos</span> para
+  preservar tu músculo, tu piel y blindar tu metabolismo.
+</p>
 ```
+
 With:
+
 ```tsx
-          <p className="text-slate-700 text-[15px] md:text-lg leading-relaxed">
-            📚 El{' '}
-            <span className="font-bold text-[#5C6851]">
-              Megapack SIBO: El Método Anti-Inflamación
-            </span>{' '}
-            reúne guías, protocolos, listas de compras, planners, checklists
-            y reemplazos inteligentes, organizados en{' '}
-            <span className="font-semibold text-[#2f3a2c]">6 módulos</span>,
-            con{' '}
-            <span className="font-semibold text-[#2f3a2c]">5 bonos incluidos</span>{' '}
-            — todo en PDFs editables, imprimibles e interactivos.
-          </p>
+<p className="text-slate-700 text-[15px] md:text-lg leading-relaxed">
+  📚 El{" "}
+  <span className="font-bold text-[#5C6851]">
+    Megapack SIBO: El Método Anti-Inflamación
+  </span>{" "}
+  reúne guías, protocolos, listas de compras, planners, checklists y reemplazos
+  inteligentes, organizados en{" "}
+  <span className="font-semibold text-[#2f3a2c]">6 módulos</span>, con{" "}
+  <span className="font-semibold text-[#2f3a2c]">5 bonos incluidos</span> — todo
+  en PDFs editables, imprimibles e interactivos.
+</p>
 ```
 
 - [ ] **Step 6: Replace the green "evidence" block heading and paragraph**
 
 Replace:
+
 ```tsx
-          <h3 className="font-heading font-bold text-white text-xl md:text-2xl mb-5">
-            🔬 Respaldado por evidencia real
-          </h3>
+<h3 className="font-heading font-bold text-white text-xl md:text-2xl mb-5">
+  🔬 Respaldado por evidencia real
+</h3>
 ```
+
 With:
+
 ```tsx
-          <h3 className="font-heading font-bold text-white text-xl md:text-2xl mb-5">
-            🎯 Práctico y adaptado a tu realidad
-          </h3>
+<h3 className="font-heading font-bold text-white text-xl md:text-2xl mb-5">
+  🎯 Práctico y adaptado a tu realidad
+</h3>
 ```
 
 Replace:
+
 ```tsx
-          <p className="text-[#e6ddc7] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            🔬 Con protocolos basados en{' '}
-            <span className="font-bold text-white">estudios reales de PubMed</span>,{' '}
-            cada recomendación cita su fuente — no es opinión de internet.
-            Adaptable a Semaglutida, Tirzepatida o cualquier agonista GLP-1,
-            en cualquier país de Latinoamérica.
-          </p>
+<p className="text-[#e6ddc7] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+  🔬 Con protocolos basados en{" "}
+  <span className="font-bold text-white">estudios reales de PubMed</span>, cada
+  recomendación cita su fuente — no es opinión de internet. Adaptable a
+  Semaglutida, Tirzepatida o cualquier agonista GLP-1, en cualquier país de
+  Latinoamérica.
+</p>
 ```
+
 With:
+
 ```tsx
-          <p className="text-[#e6ddc7] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            🎯 Herramientas prácticas de organización y seguimiento
-            alimentario, pensadas para adaptarse a tu rutina real. No
-            reemplazan la indicación de tu médico o nutricionista — la
-            complementan.
-          </p>
+<p className="text-[#e6ddc7] text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+  🎯 Herramientas prácticas de organización y seguimiento alimentario, pensadas
+  para adaptarse a tu rutina real. No reemplazan la indicación de tu médico o
+  nutricionista — la complementan.
+</p>
 ```
 
 - [ ] **Step 7: Replace the modules block heading**
 
 Replace:
+
 ```
 ✨ Los 5 módulos del protocolo:
 ```
+
 With:
+
 ```
 ✨ Los 6 módulos del sistema:
 ```
@@ -790,14 +865,17 @@ git commit -m "feat: reskin ContentSection copy for Megapack SIBO"
 ### Task 8: `BonusesSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/BonusesSection.tsx`
 
 **Interfaces:**
+
 - Consumes: `BonusCoverPlaceholder` from Task 1 (`import { BonusCoverPlaceholder } from "./BonusCoverPlaceholder";`).
 
 - [ ] **Step 1: Add the placeholder import and drop the now-unused `Gift`... keep it (still used below), just add the new import**
 
 Add after `import { Gift } from "lucide-react";`:
+
 ```tsx
 import { BonusCoverPlaceholder } from "./BonusCoverPlaceholder";
 ```
@@ -805,6 +883,7 @@ import { BonusCoverPlaceholder } from "./BonusCoverPlaceholder";
 - [ ] **Step 2: Replace the `bonuses` array (swap `image` for `emoji`)**
 
 Replace:
+
 ```tsx
 const bonuses = [
   {
@@ -839,7 +918,9 @@ const bonuses = [
   },
 ];
 ```
+
 With:
+
 ```tsx
 const bonuses = [
   {
@@ -878,29 +959,35 @@ const bonuses = [
 - [ ] **Step 3: Replace the `<img>` inside each bonus card with the placeholder**
 
 Replace:
+
 ```tsx
-                <img
-                  src={`${import.meta.env.BASE_URL}${b.image}`}
-                  alt={`Bono ${b.num}: ${b.title}`}
-                  width={400}
-                  height={500}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-contain"
-                />
+<img
+  src={`${import.meta.env.BASE_URL}${b.image}`}
+  alt={`Bono ${b.num}: ${b.title}`}
+  width={400}
+  height={500}
+  loading="lazy"
+  decoding="async"
+  className="w-full h-full object-contain"
+/>
 ```
+
 With:
+
 ```tsx
-                <BonusCoverPlaceholder emoji={b.emoji} num={b.num} />
+<BonusCoverPlaceholder emoji={b.emoji} num={b.num} />
 ```
 
 - [ ] **Step 4: Replace the summary block heading**
 
 Replace:
+
 ```
 el Protocolo GLP-1 Sin Rebote
 ```
+
 With:
+
 ```
 el Megapack SIBO: El Método Anti-Inflamación
 ```
@@ -922,14 +1009,17 @@ git commit -m "feat: reskin BonusesSection copy for Megapack SIBO"
 ### Task 9: `PricingSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/PricingSection.tsx`
 
 **Interfaces:**
+
 - Consumes: `ProductCoverPlaceholder` from Task 1.
 
 - [ ] **Step 1: Add the placeholder import**
 
 Add after `import { getCheckoutUrl } from "../utils/checkoutUrl";`:
+
 ```tsx
 import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 ```
@@ -937,6 +1027,7 @@ import { ProductCoverPlaceholder } from "./ProductCoverPlaceholder";
 - [ ] **Step 2: Replace the badge and heading**
 
 Replace:
+
 ```tsx
         <span className="inline-block px-6 py-2.5 mb-6 rounded-full border border-white/30 bg-white/10 text-white/90 font-semibold tracking-[0.18em] uppercase text-xs">
           🔥 Precio Introductorio — Por Tiempo Limitado
@@ -948,7 +1039,9 @@ Replace:
           </em>
         </h2>
 ```
+
 With:
+
 ```tsx
         <span className="inline-block px-6 py-2.5 mb-6 rounded-full border border-white/30 bg-white/10 text-white/90 font-semibold tracking-[0.18em] uppercase text-xs">
           🔥 Oferta Especial — Pack Completo
@@ -964,31 +1057,35 @@ With:
 - [ ] **Step 3: Replace the mockup `<picture>` block with the placeholder**
 
 Replace:
+
 ```tsx
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
-              alt="Protocolo GLP-1 Sin Rebote"
-              width={1254}
-              height={1254}
-              loading="lazy"
-              decoding="async"
-              className="w-full h-auto rounded-2xl shadow-2xl shadow-black/20"
-            />
-          </picture>
+<picture>
+  <source
+    media="(min-width: 768px)"
+    srcSet={`${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`}
+  />
+  <img
+    src={`${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobile.webp`}
+    alt="Protocolo GLP-1 Sin Rebote"
+    width={1254}
+    height={1254}
+    loading="lazy"
+    decoding="async"
+    className="w-full h-auto rounded-2xl shadow-2xl shadow-black/20"
+  />
+</picture>
 ```
+
 With:
+
 ```tsx
-          <ProductCoverPlaceholder className="shadow-2xl shadow-black/20" />
+<ProductCoverPlaceholder className="shadow-2xl shadow-black/20" />
 ```
 
 - [ ] **Step 4: Replace the price card body**
 
 Replace:
+
 ```tsx
           <div className="text-slate-500 text-base md:text-lg mb-3">
             Precio regular: <span className="line-through">USD 97</span>
@@ -1011,7 +1108,9 @@ Replace:
             🔥 ¡Última oportunidad! El precio sube al finalizar el contador.
           </p>
 ```
+
 With:
+
 ```tsx
           <div className="text-slate-500 text-base md:text-lg mb-3">
             Precio Normal: <span className="line-through">$59.500 ARS</span>
@@ -1024,9 +1123,6 @@ With:
           <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
             $19.990
           </div>
-          <span className="inline-block bg-slate-100 text-slate-700 text-sm font-medium px-4 py-1.5 rounded-full mb-5">
-            Pagás en un solo pago, accedés de forma inmediata
-          </span>
           <p className="text-[#B85C43] font-semibold text-base leading-snug mb-6">
             🔥 ¡Última oportunidad! El precio sube al finalizar el contador.
           </p>
@@ -1035,10 +1131,13 @@ With:
 - [ ] **Step 5: Replace the CTA button label**
 
 Replace:
+
 ```
 🚀 QUIERO EL PROTOCOLO COMPLETO
 ```
+
 With:
+
 ```
 🚀 SÍ, QUIERO EL MEGAPACK AHORA
 ```
@@ -1060,11 +1159,13 @@ git commit -m "feat: reskin PricingSection copy and price for Megapack SIBO"
 ### Task 10: `GuaranteeSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/GuaranteeSection.tsx:17-25`
 
 - [ ] **Step 1: Replace the guarantee copy**
 
 Replace:
+
 ```tsx
           <h3 className="text-base md:text-xl font-bold text-[#2f3a2c] mb-2 md:mb-3">
             Sin formularios, sin excusas
@@ -1078,7 +1179,9 @@ Replace:
             Riesgo Cero Garantizado
           </div>
 ```
+
 With:
+
 ```tsx
           <h3 className="text-base md:text-xl font-bold text-[#2f3a2c] mb-2 md:mb-3">
             Sin preguntas, sin formularios interminables, sin drama
@@ -1110,64 +1213,71 @@ git commit -m "feat: reskin GuaranteeSection copy for Megapack SIBO"
 ### Task 11: `TestimonialsBottom.tsx`
 
 **Files:**
+
 - Modify: `src/components/TestimonialsBottom.tsx`
 
 - [ ] **Step 1: Replace the `testimonials` array**
 
 Replace:
+
 ```tsx
 const testimonials = [
-{
-  initial: 'C',
-  color: 'bg-pink-100 text-pink-700',
-  name: 'Carlos R.',
-  location: 'Buenos Aires · -12kg grasa / +1kg músculo',
-  text: 'Bajé 12kg pero mi piel se veía horrible. Con el Protocolo GLP-1 recuperé la firmeza y hoy entreno con más fuerza que antes de empezar.'
-},
-{
-  initial: 'M',
-  color: 'bg-blue-100 text-blue-700',
-  name: 'Mariela S.',
-  location: 'Córdoba · Transformación facial y firmeza',
-  text: 'Mi médico me felicitó pero yo odiaba mi cara en las fotos. La guía Anti Rostro Hundido fue clave. Bajé de peso sin parecer 10 años más vieja.'
-},
-{
-  initial: 'R',
-  color: 'bg-emerald-100 text-emerald-700',
-  name: 'Rodrigo M.',
-  location: 'Lima · Mantenimiento post-tratamiento',
-  text: 'Tenía terror de dejar la inyección. Seguí el Exit Strategy y no solo mantuve el peso — seguí bajando sin el fármaco.'
-}];
+  {
+    initial: "C",
+    color: "bg-pink-100 text-pink-700",
+    name: "Carlos R.",
+    location: "Buenos Aires · -12kg grasa / +1kg músculo",
+    text: "Bajé 12kg pero mi piel se veía horrible. Con el Protocolo GLP-1 recuperé la firmeza y hoy entreno con más fuerza que antes de empezar.",
+  },
+  {
+    initial: "M",
+    color: "bg-blue-100 text-blue-700",
+    name: "Mariela S.",
+    location: "Córdoba · Transformación facial y firmeza",
+    text: "Mi médico me felicitó pero yo odiaba mi cara en las fotos. La guía Anti Rostro Hundido fue clave. Bajé de peso sin parecer 10 años más vieja.",
+  },
+  {
+    initial: "R",
+    color: "bg-emerald-100 text-emerald-700",
+    name: "Rodrigo M.",
+    location: "Lima · Mantenimiento post-tratamiento",
+    text: "Tenía terror de dejar la inyección. Seguí el Exit Strategy y no solo mantuve el peso — seguí bajando sin el fármaco.",
+  },
+];
 ```
+
 With:
+
 ```tsx
 const testimonials = [
-{
-  initial: 'M',
-  color: 'bg-pink-100 text-pink-700',
-  name: 'María G.',
-  location: 'Buenos Aires',
-  text: 'Antes tenía información suelta de mil lados. Con el sistema pude ordenar mis comidas, preparar mejor mis semanas y dejar de terminar cada noche inflamada sin entender por qué.'
-},
-{
-  initial: 'L',
-  color: 'bg-blue-100 text-blue-700',
-  name: 'Laura P.',
-  location: 'Córdoba',
-  text: 'Lo que más me sirvió fue la estructura para arrancar. Ahora cada semana empieza con un plan claro, compras definidas y sin improvisar en el momento de hambre.'
-},
-{
-  initial: 'A',
-  color: 'bg-emerald-100 text-emerald-700',
-  name: 'Andrea R.',
-  location: 'Rosario',
-  text: 'Me ayudó a mejorar la forma en que me relaciono con la comida. Mi familia entiende mejor lo que necesito y yo siento que tengo control por primera vez en años.'
-}];
+  {
+    initial: "M",
+    color: "bg-pink-100 text-pink-700",
+    name: "María G.",
+    location: "Buenos Aires",
+    text: "Antes tenía información suelta de mil lados. Con el sistema pude ordenar mis comidas, preparar mejor mis semanas y dejar de terminar cada noche inflamada sin entender por qué.",
+  },
+  {
+    initial: "L",
+    color: "bg-blue-100 text-blue-700",
+    name: "Laura P.",
+    location: "Córdoba",
+    text: "Lo que más me sirvió fue la estructura para arrancar. Ahora cada semana empieza con un plan claro, compras definidas y sin improvisar en el momento de hambre.",
+  },
+  {
+    initial: "A",
+    color: "bg-emerald-100 text-emerald-700",
+    name: "Andrea R.",
+    location: "Rosario",
+    text: "Me ayudó a mejorar la forma en que me relaciono con la comida. Mi familia entiende mejor lo que necesito y yo siento que tengo control por primera vez en años.",
+  },
+];
 ```
 
 - [ ] **Step 2: Replace the section header copy (drop the invented usage stat)**
 
 Replace:
+
 ```tsx
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             Lo que otros ya están viviendo
@@ -1182,7 +1292,9 @@ Replace:
             Argentina · Chile
           </p>
 ```
+
 With:
+
 ```tsx
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             Lo que dicen otras mujeres que ya lo usan
@@ -1200,10 +1312,13 @@ With:
 - [ ] **Step 3: Change the testimonials grid to 3 columns**
 
 Replace:
+
 ```tsx
         <div className="grid md:grid-cols-2 gap-6">
 ```
+
 With:
+
 ```tsx
         <div className="grid md:grid-cols-3 gap-6">
 ```
@@ -1225,11 +1340,13 @@ git commit -m "feat: reskin TestimonialsBottom with real Megapack SIBO reviews"
 ### Task 12: `FaqSection.tsx`
 
 **Files:**
+
 - Modify: `src/components/FaqSection.tsx:4-29`
 
 - [ ] **Step 1: Replace the `faqs` array**
 
 Replace:
+
 ```tsx
 const faqs = [
   {
@@ -1258,7 +1375,9 @@ const faqs = [
   },
 ];
 ```
+
 With:
+
 ```tsx
 const faqs = [
   {
@@ -1291,14 +1410,16 @@ const faqs = [
 - [ ] **Step 2: Replace the section header copy**
 
 Replace:
+
 ```tsx
-          <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#566049] text-white font-semibold tracking-[0.18em] uppercase text-xs">
-            Preguntas Frecuentes
-          </span>
+<span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#566049] text-white font-semibold tracking-[0.18em] uppercase text-xs">
+  Preguntas Frecuentes
+</span>
 ```
+
 With: leave unchanged (already generic and correct).
 
-*(No further edit needed for the header — only the `faqs` array changes in this file.)*
+_(No further edit needed for the header — only the `faqs` array changes in this file.)_
 
 - [ ] **Step 3: Type-check**
 
@@ -1317,15 +1438,19 @@ git commit -m "feat: reskin FaqSection with Megapack SIBO questions"
 ### Task 13: `FinalPricingCTA.tsx`
 
 **Files:**
+
 - Modify: `src/components/FinalPricingCTA.tsx`
 
 - [ ] **Step 1: Swap the icon imports (drop `Star`, add `Globe`)**
 
 Replace:
+
 ```tsx
 import { ArrowRight, Star, ShieldCheck, Zap, CreditCard } from "lucide-react";
 ```
+
 With:
+
 ```tsx
 import { ArrowRight, Globe, ShieldCheck, Zap, CreditCard } from "lucide-react";
 ```
@@ -1333,6 +1458,7 @@ import { ArrowRight, Globe, ShieldCheck, Zap, CreditCard } from "lucide-react";
 - [ ] **Step 2: Replace the badge and heading**
 
 Replace:
+
 ```tsx
         <h2 className="text-3xl md:text-5xl font-bold font-heading text-[#2f3a2c] mb-5 leading-tight">
           Tu transformación merece terminar con un cuerpo{" "}
@@ -1346,7 +1472,9 @@ Replace:
           en protocolos mal armados.
         </p>
 ```
+
 With:
+
 ```tsx
         <h2 className="text-3xl md:text-5xl font-bold font-heading text-[#2f3a2c] mb-5 leading-tight">
           Más claridad, más orden y{" "}
@@ -1362,6 +1490,7 @@ With:
 - [ ] **Step 3: Replace the offer card**
 
 Replace:
+
 ```tsx
           <h3 className="font-bold text-[#2f3a2c] mb-2 text-lg md:text-xl">
             Kit Completo: Protocolo GLP-1 Sin Rebote + 5 Bonos GRATIS
@@ -1369,7 +1498,9 @@ Replace:
           <div className="text-slate-500 line-through mb-2">USD 97</div>
           <div className="text-4xl font-bold text-[#B85C43] mb-6">$19 USD</div>
 ```
+
 With:
+
 ```tsx
           <h3 className="font-bold text-[#2f3a2c] mb-2 text-lg md:text-xl">
             🎁 Kit Completo Megapack SIBO: El Método Anti-Inflamación + 5
@@ -1384,10 +1515,13 @@ With:
 - [ ] **Step 4: Replace the CTA button label**
 
 Replace:
+
 ```
 🚀 SÍ, QUIERO MI PROTOCOLO COMPLETO HOY
 ```
+
 With:
+
 ```
 🚀 SÍ, QUIERO MI MEGAPACK AHORA
 ```
@@ -1395,55 +1529,52 @@ With:
 - [ ] **Step 5: Replace the trust row**
 
 Replace:
+
 ```tsx
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-sm text-slate-500 font-medium">
-          <span className="flex items-center justify-center gap-1.5">
-            <Star
-              className="w-4 h-4 fill-[#d4a017] text-[#d4a017]"
-              aria-hidden="true"
-            />
-            4.9/5 — Reseñas verificadas
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <ShieldCheck
-              className="w-4 h-4 text-[#4A7CB5]"
-              aria-hidden="true"
-            />
-            Garantía de 7 Días
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
-            Acceso inmediato
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
-            Pago único
-          </span>
-        </div>
+<div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-sm text-slate-500 font-medium">
+  <span className="flex items-center justify-center gap-1.5">
+    <Star
+      className="w-4 h-4 fill-[#d4a017] text-[#d4a017]"
+      aria-hidden="true"
+    />
+    4.9/5 — Reseñas verificadas
+  </span>
+  <span className="flex items-center justify-center gap-1.5">
+    <ShieldCheck className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
+    Garantía de 7 Días
+  </span>
+  <span className="flex items-center justify-center gap-1.5">
+    <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
+    Acceso inmediato
+  </span>
+  <span className="flex items-center justify-center gap-1.5">
+    <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
+    Pago único
+  </span>
+</div>
 ```
+
 With:
+
 ```tsx
-        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-sm text-slate-500 font-medium">
-          <span className="flex items-center justify-center gap-1.5">
-            <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
-            Acceso inmediato
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
-            Pago único
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <ShieldCheck
-              className="w-4 h-4 text-[#4A7CB5]"
-              aria-hidden="true"
-            />
-            Garantía de 7 Días
-          </span>
-          <span className="flex items-center justify-center gap-1.5">
-            <Globe className="w-4 h-4 text-[#5C6851]" aria-hidden="true" />
-            Para mujeres de Argentina y LATAM
-          </span>
-        </div>
+<div className="flex flex-col sm:flex-row sm:flex-wrap gap-y-2.5 sm:gap-x-6 sm:gap-y-3 justify-center items-center text-sm text-slate-500 font-medium">
+  <span className="flex items-center justify-center gap-1.5">
+    <Zap className="w-4 h-4 text-[#E8A23D]" aria-hidden="true" />
+    Acceso inmediato
+  </span>
+  <span className="flex items-center justify-center gap-1.5">
+    <CreditCard className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
+    Pago único
+  </span>
+  <span className="flex items-center justify-center gap-1.5">
+    <ShieldCheck className="w-4 h-4 text-[#4A7CB5]" aria-hidden="true" />
+    Garantía de 7 Días
+  </span>
+  <span className="flex items-center justify-center gap-1.5">
+    <Globe className="w-4 h-4 text-[#5C6851]" aria-hidden="true" />
+    Para mujeres de Argentina y LATAM
+  </span>
+</div>
 ```
 
 - [ ] **Step 6: Type-check**
@@ -1463,11 +1594,13 @@ git commit -m "feat: reskin FinalPricingCTA copy and price for Megapack SIBO"
 ### Task 14: `Footer.tsx`
 
 **Files:**
+
 - Modify: `src/components/Footer.tsx`
 
 - [ ] **Step 1: Replace the footer title, disclaimer, contact link and copyright**
 
 Replace:
+
 ```tsx
         <div className="text-white font-bold text-xl mb-6 flex items-center justify-center gap-2">
           🛡️ PROTOCOLO GLP-1 SIN REBOTE — GRASAMAX
@@ -1501,7 +1634,9 @@ Replace:
           </p>
         </div>
 ```
+
 With:
+
 ```tsx
         <div className="text-white font-bold text-xl mb-6 flex items-center justify-center gap-2">
           🛡️ MEGAPACK SIBO: EL MÉTODO ANTI-INFLAMACIÓN
@@ -1556,15 +1691,19 @@ git commit -m "feat: reskin Footer with Megapack SIBO disclaimer and branding"
 ### Task 15: `FloatingCTA.tsx`
 
 **Files:**
+
 - Modify: `src/components/FloatingCTA.tsx:45`
 
 - [ ] **Step 1: Replace the floating button label**
 
 Replace:
+
 ```
 🚀 ¡QUIERO EL PROTOCOLO YA!
 ```
+
 With:
+
 ```
 🚀 ¡QUIERO MI MEGAPACK YA!
 ```
@@ -1586,16 +1725,20 @@ git commit -m "feat: reskin FloatingCTA label for Megapack SIBO"
 ### Task 16: `PurchaseNotification.tsx`
 
 **Files:**
+
 - Modify: `src/components/PurchaseNotification.tsx:5-15`
 
 - [ ] **Step 1: Replace the product name constants**
 
 Replace:
+
 ```tsx
 const PRODUCT_NAME = "Protocolo GLP-1 Sin Rebote";
 const PRODUCT_NAME_SHORT = "Protocolo GLP-1";
 ```
+
 With:
+
 ```tsx
 const PRODUCT_NAME = "Megapack SIBO: El Método Anti-Inflamación";
 const PRODUCT_NAME_SHORT = "Megapack SIBO";
@@ -1604,6 +1747,7 @@ const PRODUCT_NAME_SHORT = "Megapack SIBO";
 - [ ] **Step 2: Replace the notification names with female names (copy targets women specifically)**
 
 Replace:
+
 ```tsx
 const NOTIFICATIONS = [
   { name: "Paola V.", city: "San José", minutesAgo: 27 },
@@ -1614,7 +1758,9 @@ const NOTIFICATIONS = [
   { name: "Sergio N.", city: "Buenos Aires", minutesAgo: 19 },
 ];
 ```
+
 With:
+
 ```tsx
 const NOTIFICATIONS = [
   { name: "Paola V.", city: "San José", minutesAgo: 27 },
@@ -1643,16 +1789,17 @@ git commit -m "feat: reskin PurchaseNotification for Megapack SIBO"
 ### Task 17: `App.tsx` meta/SEO/JSON-LD + `index.html` title
 
 **Files:**
+
 - Modify: `src/App.tsx`
 - Modify: `index.html:6`
 
 - [ ] **Step 1: Replace the top-of-file constants**
 
 Replace:
+
 ```tsx
 const META_PIXEL_ID = "8851973042408664";
-const PAGE_TITLE =
-  "Protocolo GLP-1 Sin Rebote — Grasamax | Biohacking & GLP-1";
+const PAGE_TITLE = "Protocolo GLP-1 Sin Rebote — Grasamax | Biohacking & GLP-1";
 const PAGE_DESC =
   "El manual técnico que tu médico no te dio para transformarte con GLP-1 sin perder músculo, firmeza ni piel.";
 const HERO_IMAGE = `${import.meta.env.BASE_URL}protocolo-glp1-mockup.webp`;
@@ -1660,7 +1807,9 @@ const HERO_IMAGE_MOBILE = `${import.meta.env.BASE_URL}protocolo-glp1-mockup-mobi
 
 const SITE_URL = "https://grasamax.com";
 ```
+
 With:
+
 ```tsx
 const META_PIXEL_ID = "";
 const PAGE_TITLE =
@@ -1674,103 +1823,103 @@ const SITE_URL = "https://sibo.tupuntodigital.shop";
 - [ ] **Step 2: Remove the hero image preload links**
 
 Delete this whole block (it referenced `HERO_IMAGE`/`HERO_IMAGE_MOBILE`, which no longer exist — there is no real mockup file to preload while using the placeholder components):
+
 ```tsx
-    addLink("preload", HERO_IMAGE_MOBILE, {
-      as: "image",
-      fetchpriority: "high",
-      media: "(max-width: 767px)",
-    });
-    addLink("preload", HERO_IMAGE, {
-      as: "image",
-      fetchpriority: "high",
-      media: "(min-width: 768px)",
-    });
+addLink("preload", HERO_IMAGE_MOBILE, {
+  as: "image",
+  fetchpriority: "high",
+  media: "(max-width: 767px)",
+});
+addLink("preload", HERO_IMAGE, {
+  as: "image",
+  fetchpriority: "high",
+  media: "(min-width: 768px)",
+});
 ```
 
 - [ ] **Step 3: Remove the og:image / twitter:image tags and update og:site_name**
 
 Replace:
+
 ```tsx
-    setMeta("property", "og:type", "website");
-    setMeta("property", "og:title", PAGE_TITLE);
-    setMeta("property", "og:description", PAGE_DESC);
-    setMeta("property", "og:locale", "es_LA");
-    setMeta("property", "og:image", HERO_IMAGE);
-    setMeta("property", "og:url", SITE_URL);
-    setMeta(
-      "property",
-      "og:site_name",
-      "Grasamax",
-    );
-    setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:image", HERO_IMAGE);
-    setMeta("name", "twitter:title", PAGE_TITLE);
-    setMeta("name", "twitter:description", PAGE_DESC);
+setMeta("property", "og:type", "website");
+setMeta("property", "og:title", PAGE_TITLE);
+setMeta("property", "og:description", PAGE_DESC);
+setMeta("property", "og:locale", "es_LA");
+setMeta("property", "og:image", HERO_IMAGE);
+setMeta("property", "og:url", SITE_URL);
+setMeta("property", "og:site_name", "Grasamax");
+setMeta("name", "twitter:card", "summary_large_image");
+setMeta("name", "twitter:image", HERO_IMAGE);
+setMeta("name", "twitter:title", PAGE_TITLE);
+setMeta("name", "twitter:description", PAGE_DESC);
 ```
+
 With:
+
 ```tsx
-    setMeta("property", "og:type", "website");
-    setMeta("property", "og:title", PAGE_TITLE);
-    setMeta("property", "og:description", PAGE_DESC);
-    setMeta("property", "og:locale", "es_LA");
-    setMeta("property", "og:url", SITE_URL);
-    setMeta(
-      "property",
-      "og:site_name",
-      "Megapack SIBO",
-    );
-    setMeta("name", "twitter:card", "summary_large_image");
-    setMeta("name", "twitter:title", PAGE_TITLE);
-    setMeta("name", "twitter:description", PAGE_DESC);
+setMeta("property", "og:type", "website");
+setMeta("property", "og:title", PAGE_TITLE);
+setMeta("property", "og:description", PAGE_DESC);
+setMeta("property", "og:locale", "es_LA");
+setMeta("property", "og:url", SITE_URL);
+setMeta("property", "og:site_name", "Megapack SIBO");
+setMeta("name", "twitter:card", "summary_large_image");
+setMeta("name", "twitter:title", PAGE_TITLE);
+setMeta("name", "twitter:description", PAGE_DESC);
 ```
 
 - [ ] **Step 4: Replace the Product JSON-LD**
 
 Replace:
+
 ```tsx
-      ld.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: "Protocolo GLP-1 Sin Rebote",
-        description: PAGE_DESC,
-        image: HERO_IMAGE,
-        brand: {
-          "@type": "Brand",
-          name: "Grasamax",
-        },
-        offers: {
-          "@type": "Offer",
-          price: "19",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-          url: getCheckoutUrl(),
-        },
-      });
+ld.textContent = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Protocolo GLP-1 Sin Rebote",
+  description: PAGE_DESC,
+  image: HERO_IMAGE,
+  brand: {
+    "@type": "Brand",
+    name: "Grasamax",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "19",
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    url: getCheckoutUrl(),
+  },
+});
 ```
+
 With:
+
 ```tsx
-      ld.textContent = JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Product",
-        name: "Megapack SIBO: El Método Anti-Inflamación",
-        description: PAGE_DESC,
-        brand: {
-          "@type": "Brand",
-          name: "Megapack SIBO",
-        },
-        offers: {
-          "@type": "Offer",
-          price: "19990",
-          priceCurrency: "ARS",
-          availability: "https://schema.org/InStock",
-          url: getCheckoutUrl(),
-        },
-      });
+ld.textContent = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Megapack SIBO: El Método Anti-Inflamación",
+  description: PAGE_DESC,
+  brand: {
+    "@type": "Brand",
+    name: "Megapack SIBO",
+  },
+  offers: {
+    "@type": "Offer",
+    price: "19990",
+    priceCurrency: "ARS",
+    availability: "https://schema.org/InStock",
+    url: getCheckoutUrl(),
+  },
+});
 ```
 
 - [ ] **Step 5: Replace the FAQPage JSON-LD questions**
 
 Replace:
+
 ```tsx
         mainEntity: [
           {
@@ -1799,7 +1948,9 @@ Replace:
           },
         ].map((item) => ({
 ```
+
 With:
+
 ```tsx
         mainEntity: [
           {
@@ -1832,12 +1983,15 @@ With:
 - [ ] **Step 6: Update `index.html`'s static `<title>`**
 
 Replace (in `index.html`):
+
 ```html
-    <title>Protocolo GLP-1 Sin Rebote — Grasamax</title>
+<title>Protocolo GLP-1 Sin Rebote — Grasamax</title>
 ```
+
 With:
+
 ```html
-    <title>Megapack SIBO: El Método Anti-Inflamación</title>
+<title>Megapack SIBO: El Método Anti-Inflamación</title>
 ```
 
 - [ ] **Step 7: Type-check**
@@ -1873,11 +2027,13 @@ grep -ril "Grasamax" src/
 grep -ril "bio-hack" src/
 grep -ril "PubMed" src/
 ```
+
 Expected: no output (no matches) for all four.
 
 - [ ] **Step 3: Manual visual QA in the browser**
 
 Run: `npm run preview` (after the build in Step 1), open the printed local URL, and check:
+
 - Every section reads as "Megapack SIBO: El Método Anti-Inflamación" content, no mixed branding.
 - The two placeholder mockup styles (`ProductCoverPlaceholder` in Hero/Solution/Pricing, `BonusCoverPlaceholder` x5 in Bonuses) render with the olive/gold palette, no broken image icons.
 - Clicking any "comprar"/CTA button either scrolls to the pricing section (`#comprar` anchor) or opens `https://megapack-sibo-el-metodo-anti-inflamacion.impultienda.ar/checkout` in a new context — confirm by inspecting the `href` in devtools (don't need to complete a real checkout).
