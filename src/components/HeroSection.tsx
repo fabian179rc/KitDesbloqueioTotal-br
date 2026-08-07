@@ -43,7 +43,7 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.1,
           }}
-          className="font-heading md:text-5xl font-extrabold text-[#2f3a2c] mb-0 text-[21px] leading-[1.15] md:leading-[normal]"
+          className="font-heading md:text-5xl font-extrabold text-[#2f3a2c] mb-4 md:mb-0 text-[21px] leading-[1.15] md:leading-[normal]"
         >
           La Passione per i Motori
           <br />
