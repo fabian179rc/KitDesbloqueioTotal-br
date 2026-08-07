@@ -3,7 +3,7 @@ import { MotionConfig } from "framer-motion";
 import { Landing } from "./pages/Landing";
 import { useScreenInit } from "./useScreenInit";
 import { getCheckoutUrl } from "./utils/checkoutUrl";
-const META_PIXEL_ID = "";
+const META_PIXEL_ID = "1055670877018717";
 const PAGE_TITLE =
   "Gran Pacchetto Meccanica Kids | La Passione per i Motori di Tuo Figlio, Accesa da Oggi";
 const PAGE_DESC =
@@ -159,7 +159,6 @@ export function App() {
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined")
       return;
-    // Sin Meta Pixel configurado todavía (META_PIXEL_ID vacío = no-op).
     if (!META_PIXEL_ID) return;
     const loadPixel = () => {
       const w = window as any;
