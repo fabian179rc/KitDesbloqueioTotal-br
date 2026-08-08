@@ -2,16 +2,16 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
-const PRODUCT_NAME = "Gran Pacchetto Meccanica Kids";
-const PRODUCT_NAME_SHORT = "Gran Pacchetto";
+const PRODUCT_NAME = "Kit Desbloqueio Total";
+const PRODUCT_NAME_SHORT = "Kit Desbloqueio";
 
 const NOTIFICATIONS = [
-  { name: "Marco T.", city: "Milano", minutesAgo: 27 },
-  { name: "Laura B.", city: "Torino", minutesAgo: 12 },
-  { name: "Giuseppe R.", city: "Napoli", minutesAgo: 41 },
-  { name: "Francesca D.", city: "Roma", minutesAgo: 8 },
-  { name: "Andrea M.", city: "Bologna", minutesAgo: 33 },
-  { name: "Chiara S.", city: "Firenze", minutesAgo: 19 },
+  { name: "Mariana S.", city: "São Paulo", minutesAgo: 27 },
+  { name: "Camila R.", city: "Belo Horizonte", minutesAgo: 12 },
+  { name: "Débora T.", city: "Porto Alegre", minutesAgo: 41 },
+  { name: "Fernanda D.", city: "Rio de Janeiro", minutesAgo: 8 },
+  { name: "Andréa M.", city: "Curitiba", minutesAgo: 33 },
+  { name: "Juliana S.", city: "Salvador", minutesAgo: 19 },
 ];
 
 export function PurchaseNotification() {
@@ -51,29 +51,29 @@ export function PurchaseNotification() {
             <div className="flex items-center justify-between mb-0.5 sm:mb-2">
               <span className="inline-flex items-center gap-0.5 sm:gap-1.5 text-emerald-600 font-bold text-[6px] sm:text-xs tracking-wide uppercase">
                 <span className="w-1 h-1 sm:w-2 sm:h-2 rounded-full bg-emerald-500" />
-                Acquisto verificato
+                Compra verificada
               </span>
               <button
                 type="button"
                 onClick={() => setVisible(false)}
-                aria-label="Chiudi notifica"
+                aria-label="Fechar notificação"
                 className="text-slate-400 hover:text-slate-600 transition-colors"
               >
                 <X className="w-2 h-2 sm:w-4 sm:h-4" />
               </button>
             </div>
             <p className="text-slate-900 font-bold text-[9px] sm:text-sm mb-0.5 truncate">
-              {current.name} da {current.city}
+              {current.name} de {current.city}
             </p>
             <p className="text-slate-500 text-[9px] sm:text-sm leading-snug">
-              ha acquistato{" "}
+              comprou{" "}
               <span className="text-[#B85C43] font-semibold">
                 <span className="sm:hidden">{PRODUCT_NAME_SHORT}</span>
                 <span className="hidden sm:inline">{PRODUCT_NAME}</span>
               </span>
             </p>
             <p className="text-slate-400 text-[7px] sm:text-xs mt-0.5 sm:mt-1.5">
-              {current.minutesAgo} minuti fa
+              há {current.minutesAgo} minutos
             </p>
           </motion.div>
         )}

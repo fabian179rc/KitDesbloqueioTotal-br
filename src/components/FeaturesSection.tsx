@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 const features = [
   {
-    title: "✅ Insegnare senza preparazione",
-    desc: "Tutto è già strutturato. Apri il PDF e inizia subito, senza dover cercare materiali o inventare spiegazioni.",
+    title: "✅ Limpeza Espiritual Profunda Sem Sair de Casa",
+    desc: "Rituais guiados passo a passo com elementos simples que você já tem em casa, sem depender de terceiros.",
   },
   {
-    title: "✅ Mantenere alta l'attenzione",
-    desc: "Missioni, flashcards e sfide giornaliere tengono il bambino coinvolto per ore, senza schermi.",
+    title: "✅ Quebra de Contratos de Escassez e Sofrimento",
+    desc: "Decretos e rituais específicos para encerrar dívidas espirituais que bloqueiam sua prosperidade e paz.",
   },
   {
-    title: "✅ Creare un ricordo indelebile",
-    desc: "Il Diploma finale trasforma l'apprendimento in un momento di orgoglio per il bambino e per te.",
+    title: "✅ Controle Total do Seu Processo de Desbloqueio",
+    desc: "Um calendário e checklist diário mostram exatamente o que fazer a cada um dos 7 dias, sem adivinhação.",
   },
   {
-    title: "✅ Spiegare concetti complessi in modo semplice",
-    desc: "Analogie visive e linguaggio accessibile fanno il lavoro difficile al posto tuo.",
+    title: "✅ Paz e Leveza Real a Partir do Dia 1",
+    desc: "Cada etapa do protocolo já traz orientação, ritual, decreto e confirmação de fechamento prontos.",
   },
 ];
 
@@ -26,7 +26,7 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#2f3a2c]">
-            COSA POTRAI FARE CON QUESTO SISTEMA?
+            O QUE VOCÊ VAI CONQUISTAR COM ESTE KIT?
           </h2>
         </div>
 

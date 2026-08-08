@@ -42,7 +42,7 @@ export function FloatingCTA() {
               onClick={scrollToOffer}
               className="inline-flex items-center justify-center gap-2 bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold text-base px-8 py-4 rounded-full shadow-2xl shadow-[#B85C43]/40 border-2 border-white/20 transition-colors"
             >
-              🚀 VOGLIO IL GRAN PACCHETTO ORA!
+              🚀 QUERO MEU KIT DESBLOQUEIO TOTAL!
             </a>
           </div>
         </motion.div>

@@ -3,33 +3,33 @@ import { motion } from "framer-motion";
 const bonuses = [
   {
     num: 1,
-    title: "Il Diario dell'Officina",
-    desc: "Il bambino registra i \"lavori\" fatti sull'auto di famiglia. Ogni visita sotto il cofano diventa un'esperienza documentata e ricordata.",
-    image: "/bono1.webp",
+    title: "Checklist: Onde sua Vida está Travada?",
+    desc: "Diagnóstico completo de 10 perguntas para identificar exatamente qual área está bloqueada e qual tipo de dívida kármica está ativa na sua vida agora.",
+    image: "/b1.webp",
   },
   {
     num: 2,
-    title: "Flashcards delle Parti",
-    desc: "24 carte da ritagliare con illustrazione e definizione lampo. Impara i nomi tecnici giocando a indovinare, come un vero ingegnere.",
-    image: "/bono2.webp",
+    title: "Calendário Lunar de Limpeza e Prosperidade 2024/25",
+    desc: "Saiba exatamente em quais fases da lua e dias específicos o portal espiritual está mais aberto para realizar seus rituais com 10x mais poder.",
+    image: "/b2.webp",
   },
   {
     num: 3,
-    title: "Poster Anatomia dell'Auto",
-    desc: "Un'infografica A4 stampabile da appendere in cameretta. Vista \"a raggi X\" dell'auto con tutti i componenti etichettati in italiano.",
-    image: "/bono3.webp",
+    title: "Manual de Socorro Espiritual: Ação 24 Horas",
+    desc: "Para momentos de crise aguda. Rituais simples com elementos que você tem em casa para estancar a energia negativa e trazer alívio imediato quando a situação aperta.",
+    image: "/b3.webp",
   },
   {
     num: 4,
-    title: "Missione Meccanica — La Sfida dei 7 Giorni",
-    desc: "Un calendario di 7 missioni reali da completare insieme. Dal riconoscere i loghi allo spiegare il motore: ogni giorno un obiettivo concreto.",
-    image: "/bono4.webp",
+    title: "Decreto de Poder: O Script da Libertação Total",
+    desc: "O texto exato, palavra por palavra, para declarar sua independência espiritual. Uma oração poderosa de revogação de contratos de pobreza e sofrimento selados no passado.",
+    image: "/b4.webp",
   },
   {
     num: 5,
-    title: "La Patente di Piccolo Meccanico",
-    desc: "Il diploma ufficiale personalizzabile da stampare e consegnare. Il premio finale che celebra tutto ciò che il bambino ha imparato.",
-    image: "/bono5.webp",
+    title: "O Imã de Dinheiro na sua Carteira",
+    desc: "Como consagrar o local onde você guarda seu dinheiro usando símbolos sagrados e organização energética para que sua carteira nunca fique vazia.",
+    image: "/b5.webp",
   },
 ];
 
@@ -40,11 +40,11 @@ export function BonusesSection() {
         <div className="text-center mb-8">
           {/* <span className="inline-flex items-center gap-2 px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
             <Gift className="w-4 h-4 text-[#d4a017]" />
-            5 Bonos Incluidos
+            5 Bônus Incluídos
           </span> */}
           <h2 className="font-heading font-bold text-[#2f3a2c] text-3xl md:text-5xl leading-tight">
-            5 Bonus Inclusi{" "}
-            <span className="italic text-[#5C6851]">Senza Costo Aggiuntivo</span>
+            5 Bônus Incluídos{" "}
+            <span className="italic text-[#5C6851]">Sem Custo Adicional</span>
           </h2>
         </div>
 
@@ -76,10 +76,10 @@ export function BonusesSection() {
                   loading="lazy"
                 />
                 <span className="absolute top-2.5 left-2.5 bg-rose-500 text-white font-bold text-[11px] tracking-wide uppercase px-2.5 py-1 rounded-md shadow-sm">
-                  Bono {b.num}
+                  Bônus {b.num}
                 </span>
                 <span className="absolute top-2.5 right-2.5 inline-flex items-center gap-1 bg-emerald-600 text-white font-bold text-[11px] tracking-wide uppercase px-2.5 py-1 rounded-md shadow-sm">
-                  🎁 Gratis
+                  🎁 Grátis
                 </span>
               </div>
               <div className="px-2 pb-2">

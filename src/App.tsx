@@ -3,15 +3,15 @@ import { MotionConfig } from "framer-motion";
 import { Landing } from "./pages/Landing";
 import { useScreenInit } from "./useScreenInit";
 import { getCheckoutUrl } from "./utils/checkoutUrl";
-const META_PIXEL_ID = "1055670877018717";
+const META_PIXEL_ID = "1782363579776107";
 const PAGE_TITLE =
-  "Gran Pacchetto Meccanica Kids | La Passione per i Motori di Tuo Figlio, Accesa da Oggi";
+  "Kit Desbloqueio Total | Sistema Completo Para Desbloquear Sua Vida Espiritual";
 const PAGE_DESC =
-  "Guida illustrata, flashcards, poster, missioni e diploma: tutto stampabile, tutto pronto, tutto pensato per imparare giocando. Per bambini dai 6 ai 12 anni.";
-const HERO_IMAGE = `${import.meta.env.BASE_URL}megapack-sibo-mockup.png`;
-const HERO_IMAGE_MOBILE = `${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`;
+  "7 dias de protocolo espiritual prontos para aplicar: diagnóstico, rituais, decretos, calendário e guias de proteção em PDFs prontos para usar, imprimir e transformar sua vida.";
+const HERO_IMAGE = `${import.meta.env.BASE_URL}kit-desbloqueio-mockup.png`;
+const HERO_IMAGE_MOBILE = `${import.meta.env.BASE_URL}kit-desbloqueio-mockup-mobile.png`;
 
-const SITE_URL = "https://piccoloingegnere.tupuntodigital.shop";
+const SITE_URL = "https://kitdesbloqueiototal.tupuntodigital.shop";
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(
     `meta[${attr}="${key}"]`,
@@ -43,7 +43,7 @@ export function App() {
   useScreenInit();
   useEffect(() => {
     if (typeof document === "undefined") return;
-    document.documentElement.lang = "it";
+    document.documentElement.lang = "pt-BR";
     document.title = PAGE_TITLE;
     addLink("preconnect", "/cdn.magicpatterns.com", {
       crossorigin: "",
@@ -74,13 +74,13 @@ export function App() {
     setMeta("property", "og:type", "website");
     setMeta("property", "og:title", PAGE_TITLE);
     setMeta("property", "og:description", PAGE_DESC);
-    setMeta("property", "og:locale", "it_IT");
+    setMeta("property", "og:locale", "pt_BR");
     setMeta("property", "og:image", absoluteUrl(HERO_IMAGE));
     setMeta("property", "og:url", SITE_URL);
     setMeta(
       "property",
       "og:site_name",
-      "Gran Pacchetto Meccanica Kids",
+      "Kit Desbloqueio Total",
     );
     setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:image", absoluteUrl(HERO_IMAGE));
@@ -94,17 +94,17 @@ export function App() {
       ld.textContent = JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Product",
-        name: "Gran Pacchetto Meccanica Kids",
+        name: "Kit Desbloqueio Total",
         description: PAGE_DESC,
         image: absoluteUrl(HERO_IMAGE),
         brand: {
           "@type": "Brand",
-          name: "Gran Pacchetto Meccanica Kids",
+          name: "Kit Desbloqueio Total",
         },
         offers: {
           "@type": "Offer",
-          price: "24.90",
-          priceCurrency: "EUR",
+          price: "67.00",
+          priceCurrency: "BRL",
           availability: "https://schema.org/InStock",
           url: getCheckoutUrl(),
         },
@@ -121,28 +121,28 @@ export function App() {
         "@type": "FAQPage",
         mainEntity: [
           {
-            q: "È un prodotto fisico o digitale?",
-            a: "È un prodotto 100% digitale. Riceverai l'accesso immediato al materiale dopo l'acquisto per scaricarlo e stamparlo da casa tua.",
+            q: "É em papel ou digital?",
+            a: "É um produto 100% digital. Você recebe todos os módulos de forma imediata no seu e-mail, com o guia principal, os 5 bônus e todo o material pronto para usar e imprimir em casa ou em qualquer gráfica quantas vezes precisar.",
           },
           {
-            q: "Per che età è adatto?",
-            a: "Il Gran Pacchetto è progettato per bambini dai 6 ai 12 anni. I contenuti sono spiegati con un linguaggio semplice e progressivo.",
+            q: "Preciso ter alguma religião específica para usar?",
+            a: "Não. O protocolo é baseado em princípios espirituais universais. Ele é compatível com o Espiritismo, o Catolicismo, a Umbanda, o Candomblé ou qualquer outra crença. O que importa é a sua intenção.",
           },
           {
-            q: "Devo avere conoscenze meccaniche per usarlo?",
-            a: "No. Il kit è pensato anche per genitori che non sanno nulla di meccanica. Le spiegazioni sono chiare e guidano sia l'adulto che il bambino.",
+            q: "Funciona para qualquer pessoa no Brasil?",
+            a: "Sim. O kit foi desenvolvido para qualquer pessoa que sente que sua vida está bloqueada, independentemente da sua região, idade ou situação financeira atual.",
           },
           {
-            q: "Quando ricevo l'accesso?",
-            a: "Immediatamente dopo il pagamento. Riceverai un link per scaricare tutti i file PDF direttamente nella tua email.",
+            q: "E se eu já tiver feito rituais antes sem resultado?",
+            a: "O diferencial deste kit é o método. Não são rituais soltos; é um protocolo sequencial de 7 dias onde cada passo prepara o terreno para o próximo. A ordem importa e faz toda a diferença.",
           },
           {
-            q: "Funziona senza stampante?",
-            a: "Sì. Puoi usare la guida principale direttamente dallo schermo. Alcuni bonus (flashcards, poster, diploma) sono pensati per la stampa ma possono essere usati anche in digitale.",
+            q: "Quando recebo o material?",
+            a: "Imediatamente após a confirmação do pagamento. Via PIX, o acesso é liberado em segundos. Você receberá um e-mail com o link de acesso a todos os arquivos.",
           },
           {
-            q: "Il contenuto è in italiano?",
-            a: "Sì, tutto il materiale è scritto in italiano corretto, con un linguaggio adatto ai bambini e accessibile per i genitori.",
+            q: "E se eu não tiver tempo para fazer tudo em 7 dias?",
+            a: "Sem problema. O acesso é vitalício. Você pode seguir o protocolo no seu próprio ritmo, pausar e retomar quando quiser.",
           },
         ].map((item) => ({
           "@type": "Question",

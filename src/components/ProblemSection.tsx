@@ -2,24 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 const situations = [
   {
-    emoji: "🗂️",
-    title: "Nessun materiale adatto all'età",
-    desc: "I libri tecnici sono troppo complicati. I cartoni sono troppo infantili. Non esiste una via di mezzo che insegni davvero.",
+    emoji: "😰",
+    title: "A Sensação de Que Nada Funciona",
+    desc: "Você se esforça, trabalha duro, faz tudo certo... mas o dinheiro some e os problemas aparecem do nada.",
+  },
+  {
+    emoji: "😩",
+    title: "O Medo de Que a Situação Piore",
+    desc: "E se esse bloqueio não for embora? E se continuar perdendo oportunidades por causa de uma dívida espiritual que você nem sabia que tinha?",
+  },
+  {
+    emoji: "⚖️",
+    title: "O Peso de Carregar o Passado",
+    desc: "Aquela sensação de culpa, de \"pagar por algo que você não lembra\", de estar sempre devendo algo a alguém ou ao universo.",
   },
   {
     emoji: "⏱️",
-    title: "Attività che durano 5 minuti",
-    desc: "Inizi a spiegare il motore, il bambino si annoia e torna al telefono. Non hai uno schema da seguire.",
-  },
-  {
-    emoji: "📌",
-    title: "La passione non si trasmette",
-    desc: "Ami i motori, ma non riesci a trasformare quell'amore in qualcosa di concreto e condiviso con tuo figlio.",
-  },
-  {
-    emoji: "🎯",
-    title: "Momenti persi che non tornano",
-    desc: "I bambini crescono in fretta. Ogni domenica senza una vera attività insieme è un'opportunità che non si recupera.",
+    title: "O Cansaço de Tentar Sem Ver Resultado",
+    desc: "Já tentou pensamento positivo, orações, promessas... mas a maré de azar continua.",
   },
 ];
 
@@ -29,16 +29,14 @@ export function ProblemSection() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-8">
           <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4 text-[#2f3a2c] uppercase">
-            Il tempo con tuo figlio finisce sempre davanti a uno schermo?
+            Você Sente Que Sua Vida Está "Travada" Sem Motivo Aparente?
           </h2>
           <p className="text-xl font-bold text-[#5C6851] mb-4 italic">
-            ⚡ Non è un problema di tempo. È un problema di strumenti.
+            ⚡ Você se reconhece nisso?
           </p>
           <p className="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Vuoi trasmettere la tua passione per i motori, ma ogni domenica
-            passa tra cartoni animati e tablet. Se sei un genitore, nonno o
-            zio appassionato di auto, probabilmente hai già vissuto queste
-            situazioni:
+            Se você busca equilíbrio espiritual e prosperidade, provavelmente
+            vive alguma dessas situações:
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 const CHECKOUT_BASE_URL =
-  'https://mecanicaninos-it.impultienda.ar/checkout';
+  'https://protocolo-7-dias-brasil.impultienda.ar/checkout';
 
 /**
  * Appends the current page's query string (utm_source, utm_campaign, gclid,

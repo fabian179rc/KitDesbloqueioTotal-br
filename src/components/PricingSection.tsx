@@ -12,8 +12,8 @@ import { getCheckoutUrl } from "../utils/checkoutUrl";
 export function PricingSection() {
   const [timeLeft, setTimeLeft] = useState({
     h: 1,
-    m: 29,
-    s: 59,
+    m: 28,
+    s: 28,
   });
   useEffect(() => {
     const timer = setInterval(() => {
@@ -44,15 +44,15 @@ export function PricingSection() {
   const timeBlocks = [
     {
       value: timeLeft.h,
-      label: "Ore",
+      label: "Horas",
     },
     {
       value: timeLeft.m,
-      label: "Minuti",
+      label: "Minutos",
     },
     {
       value: timeLeft.s,
-      label: "Secondi",
+      label: "Segundos",
     },
   ];
 
@@ -63,24 +63,24 @@ export function PricingSection() {
     >
       <div className="container mx-auto px-4 max-w-2xl text-center relative z-10">
         <span className="inline-block px-6 py-2.5 mb-6 rounded-full border border-white/30 bg-white/10 text-white/90 font-semibold tracking-[0.18em] uppercase text-xs">
-          🔥 Offerta Speciale — Pacchetto Completo
+          🔥 Oferta Especial — Pacote Completo
         </span>
         <h2 className="font-heading text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-          Accedi oggi al{" "}
-          <em className="italic font-bold text-[#f0e6d2]">Gran Pacchetto completo</em>
+          Acesse o kit agora e comece sua{" "}
+          <em className="italic font-bold text-[#f0e6d2]">transformação hoje mesmo</em>
         </h2>
 
         <div className="relative inline-block mb-2 w-full max-w-md mx-auto">
           <picture>
             <source
               media="(min-width: 768px)"
-              srcSet={`${import.meta.env.BASE_URL}megapack-sibo-mockup.png`}
+              srcSet={`${import.meta.env.BASE_URL}kit-desbloqueio-mockup.png`}
               width={1536}
               height={1024}
             />
             <img
-              src={`${import.meta.env.BASE_URL}megapack-sibo-mockup-mobile.png`}
-              alt="Gran Pacchetto Meccanica Kids"
+              src={`${import.meta.env.BASE_URL}kit-desbloqueio-mockup-mobile.png`}
+              alt="Kit Desbloqueio Total"
               width={1254}
               height={1254}
               loading="lazy"
@@ -98,9 +98,9 @@ export function PricingSection() {
               }}
             />
             <div className="relative text-center text-white leading-none rotate-12">
-              <div className="text-2xl md:text-3xl font-extrabold">47%</div>
+              <div className="text-2xl md:text-3xl font-extrabold">73%</div>
               <div className="text-[9px] md:text-[10px] font-bold tracking-wide mt-0.5">
-                DI SCONTO
+                DE DESCONTO
               </div>
             </div>
           </div>
@@ -113,19 +113,22 @@ export function PricingSection() {
       >
         <div className="bg-white rounded-3xl shadow-2xl shadow-black/10 p-7 md:p-8 text-center">
           <div className="text-slate-500 text-base md:text-lg mb-3">
-            Prezzo normale: <span className="line-through">€47,00</span>
+            Preço normal: <span className="line-through">R$ 197</span>
           </div>
 
           <div className="inline-flex items-center gap-2 bg-[#F3E3C3] text-[#9C5330] font-bold px-5 py-2.5 rounded-full text-sm mb-5">
-            <Flame className="w-4 h-4" /> Prezzo speciale di lancio
+            <Flame className="w-4 h-4" /> Preço especial de lançamento
           </div>
 
-          <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
-            €24,90
+          <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-1">
+            R$ 67
           </div>
+          <p className="text-slate-500 text-sm mb-5">
+            Você paga na sua moeda local
+          </p>
 
           <p className="text-[#B85C43] font-semibold text-base leading-snug mb-6">
-            🔥 Ultima occasione! Il prezzo aumenta allo scadere del contatore.
+            🔥 Última chance! O preço sobe ao finalizar o contador.
           </p>
 
           <div className="flex justify-center gap-3 mb-7">
@@ -155,7 +158,7 @@ export function PricingSection() {
             className="flex items-center justify-center gap-3 w-full bg-[#B85C43] hover:bg-[#A34F38] text-white font-bold text-lg md:text-xl px-6 py-5 rounded-full shadow-lg shadow-[#B85C43]/30 transition-colors mb-6"
           >
             <span className="flex items-center gap-2 text-center">
-              🚀 SÌ, VOGLIO IL GRAN PACCHETTO ADESSO
+              🚀 SIM, QUERO MEU KIT DESBLOQUEIO TOTAL
             </span>
             <ArrowRight className="w-6 h-6 flex-shrink-0" />
           </motion.a>
@@ -163,19 +166,19 @@ export function PricingSection() {
           <div className="grid grid-cols-2 gap-y-3 text-sm text-slate-700 font-semibold">
             <div className="flex items-center justify-center gap-2 pr-2 border-r border-slate-200">
               <Zap className="w-4 h-4 text-[#E8A23D]" />
-              Accesso immediato
+              Acesso imediato
             </div>
             <div className="flex items-center justify-center gap-2 pl-2">
               <CreditCard className="w-4 h-4 text-[#4A7CB5]" />
-              Pagamento unico
+              Pagamento único
             </div>
             <div className="flex items-center justify-center gap-2 pr-2 border-r border-slate-200">
               <ShieldCheck className="w-4 h-4 text-[#4A7CB5]" />
-              Garanzia di 7 giorni
+              Garantia de 7 dias
             </div>
             <div className="flex items-center justify-center gap-2 pl-2">
               <Lock className="w-4 h-4 text-[#E8A23D]" />
-              Pagamento sicuro
+              Pagamento seguro
             </div>
           </div>
         </div>

@@ -3,28 +3,28 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
-    q: "È un prodotto fisico o digitale?",
-    a: "È un prodotto 100% digitale. Riceverai l'accesso immediato al materiale dopo l'acquisto per scaricarlo e stamparlo da casa tua.",
+    q: "É em papel ou digital?",
+    a: "É um produto 100% digital. Você recebe todos os módulos de forma imediata no seu e-mail, com o guia principal, os 5 bônus e todo o material pronto para usar e imprimir em casa ou em qualquer gráfica quantas vezes precisar.",
   },
   {
-    q: "Per che età è adatto?",
-    a: "Il Gran Pacchetto è progettato per bambini dai 6 ai 12 anni. I contenuti sono spiegati con un linguaggio semplice e progressivo.",
+    q: "Preciso ter alguma religião específica para usar?",
+    a: "Não. O protocolo é baseado em princípios espirituais universais. Ele é compatível com o Espiritismo, o Catolicismo, a Umbanda, o Candomblé ou qualquer outra crença. O que importa é a sua intenção.",
   },
   {
-    q: "Devo avere conoscenze meccaniche per usarlo?",
-    a: "No. Il kit è pensato anche per genitori che non sanno nulla di meccanica. Le spiegazioni sono chiare e guidano sia l'adulto che il bambino.",
+    q: "Funciona para qualquer pessoa no Brasil?",
+    a: "Sim. O kit foi desenvolvido para qualquer pessoa que sente que sua vida está bloqueada, independentemente da sua região, idade ou situação financeira atual.",
   },
   {
-    q: "Quando ricevo l'accesso?",
-    a: "Immediatamente dopo il pagamento. Riceverai un link per scaricare tutti i file PDF direttamente nella tua email.",
+    q: "E se eu já tiver feito rituais antes sem resultado?",
+    a: "O diferencial deste kit é o método. Não são rituais soltos; é um protocolo sequencial de 7 dias onde cada passo prepara o terreno para o próximo. A ordem importa e faz toda a diferença.",
   },
   {
-    q: "Funziona senza stampante?",
-    a: "Sì. Puoi usare la guida principale direttamente dallo schermo. Alcuni bonus (flashcards, poster, diploma) sono pensati per la stampa ma possono essere usati anche in digitale.",
+    q: "Quando recebo o material?",
+    a: "Imediatamente após a confirmação do pagamento. Via PIX, o acesso é liberado em segundos. Você receberá um e-mail com o link de acesso a todos os arquivos.",
   },
   {
-    q: "Il contenuto è in italiano?",
-    a: "Sì, tutto il materiale è scritto in italiano corretto, con un linguaggio adatto ai bambini e accessibile per i genitori.",
+    q: "E se eu não tiver tempo para fazer tudo em 7 dias?",
+    a: "Sem problema. O acesso é vitalício. Você pode seguir o protocolo no seu próprio ritmo, pausar e retomar quando quiser.",
   },
 ];
 
@@ -35,11 +35,11 @@ export function FaqSection() {
       <div className="container mx-auto px-4 max-w-3xl">
         <div className="text-center mb-8">
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#566049] text-white font-semibold tracking-[0.18em] uppercase text-xs">
-            Domande Frequenti
+            Perguntas Frequentes
           </span>
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#2f3a2c] leading-tight">
-            Rispondiamo{" "}
-            <em className="text-[#c06a52] font-bold italic">alle tue domande</em>
+            Respondemos{" "}
+            <em className="text-[#c06a52] font-bold italic">suas dúvidas</em>
           </h2>
         </div>
 

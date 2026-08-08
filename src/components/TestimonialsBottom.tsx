@@ -5,23 +5,23 @@ const testimonials = [
 {
   initial: 'M',
   color: 'bg-pink-100 text-pink-700',
-  name: 'Marco T.',
-  location: 'Papà appassionato di auto, Milano',
-  text: 'Non sapevo come spiegare il motore a mio figlio di 8 anni. Con questo kit abbiamo passato tutto il sabato pomeriggio sotto il cofano. Alla fine mi ha spiegato lui i 4 tempi.'
+  name: 'Mariana S.',
+  location: 'Administrativa — São Paulo, SP',
+  text: 'Eu estava num ciclo horrível de gastos inesperados há meses. Segui o protocolo dos 7 dias e no quinto dia recebi uma ligação sobre uma dívida que estava me perseguindo há anos e conseguimos resolver. Parece coincidência mas eu sei que não foi.'
 },
 {
-  initial: 'L',
+  initial: 'C',
   color: 'bg-blue-100 text-blue-700',
-  name: 'Laura B.',
-  location: 'Mamma, Torino',
-  text: 'Il Diploma finale è stato il momento più bello. Mio figlio lo ha appeso in camera e lo mostra a tutti. Vale già solo per quello.'
+  name: 'Camila R.',
+  location: 'Professora — Belo Horizonte, MG',
+  text: 'O Decreto do Bônus 4 foi o que mais me impactou. Chorei lendo em voz alta. Senti que algo saiu de mim. Não sei explicar, mas a leveza que senti depois foi real.'
 },
 {
-  initial: 'G',
+  initial: 'D',
   color: 'bg-emerald-100 text-emerald-700',
-  name: 'Giuseppe R.',
-  location: 'Nonno, Napoli',
-  text: 'Mio nipote di 7 anni ha completato la sfida dei 7 giorni prima di me. Le flashcards le usa ancora per "interrogarmi" la domenica.'
+  name: 'Débora T.',
+  location: 'Comerciante — Porto Alegre, RS',
+  text: 'Minha casa vivia cheia de brigas e tensão. Usei o Guia do Bônus 5 e o Mapa de Limpeza. Em uma semana a energia mudou completamente. Meu marido até comentou sem eu falar nada.'
 }];
 
 export function TestimonialsBottom() {
@@ -31,15 +31,15 @@ export function TestimonialsBottom() {
         <div className="text-center mb-8 flex flex-col items-center">
           <MessageCircle className="w-10 h-10 text-[#d4a017] mb-3" />
           <span className="inline-block px-6 py-2.5 mb-5 rounded-full border border-white/40 bg-[#4A553F] text-white font-semibold tracking-[0.18em] uppercase text-xs">
-            Cosa dicono altri genitori
+            O que outras pessoas estão dizendo
           </span>
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-[#2f3a2c] mb-3">
-            Le parole di chi ha già il Gran Pacchetto
+            As palavras de quem já tem o Kit Desbloqueio Total
           </h2>
           <p className="text-slate-600 text-sm md:text-base">
-            Non lo diciamo noi — questo è quello che scrivono loro.
+            Não somos nós que dizemos — é o que elas escrevem.
             <br className="hidden sm:block" />
-            ⭐ 4.9/5 — Valutazione dei genitori
+            ⭐ 4.9/5 — Avaliações verificadas
           </p>
         </div>
 
