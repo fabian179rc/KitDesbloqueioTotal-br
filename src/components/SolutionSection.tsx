@@ -38,14 +38,14 @@ export function SolutionSection() {
             <source
               media="(min-width: 768px)"
               srcSet={`${import.meta.env.BASE_URL}kit-desbloqueio-mockup.png`}
-              width={1536}
-              height={1024}
+              width={1264}
+              height={848}
             />
             <img
               src={`${import.meta.env.BASE_URL}kit-desbloqueio-mockup-mobile.png`}
               alt="Kit Desbloqueio Total"
-              width={1254}
-              height={1254}
+              width={1264}
+              height={848}
               loading="lazy"
               decoding="async"
               className="w-full h-auto max-w-2xl mx-auto rounded-2xl shadow-xl shadow-navy/5 border border-slate-100"

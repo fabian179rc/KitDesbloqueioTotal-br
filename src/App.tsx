@@ -103,7 +103,7 @@ export function App() {
         },
         offers: {
           "@type": "Offer",
-          price: "67.00",
+          price: "97.00",
           priceCurrency: "BRL",
           availability: "https://schema.org/InStock",
           url: getCheckoutUrl(),

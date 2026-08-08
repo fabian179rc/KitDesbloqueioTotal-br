@@ -75,14 +75,14 @@ export function PricingSection() {
             <source
               media="(min-width: 768px)"
               srcSet={`${import.meta.env.BASE_URL}kit-desbloqueio-mockup.png`}
-              width={1536}
-              height={1024}
+              width={1264}
+              height={848}
             />
             <img
               src={`${import.meta.env.BASE_URL}kit-desbloqueio-mockup-mobile.png`}
               alt="Kit Desbloqueio Total"
-              width={1254}
-              height={1254}
+              width={1264}
+              height={848}
               loading="lazy"
               decoding="async"
               className="w-full h-auto rounded-2xl shadow-2xl shadow-black/20"
@@ -98,7 +98,7 @@ export function PricingSection() {
               }}
             />
             <div className="relative text-center text-white leading-none rotate-12">
-              <div className="text-2xl md:text-3xl font-extrabold">73%</div>
+              <div className="text-2xl md:text-3xl font-extrabold">51%</div>
               <div className="text-[9px] md:text-[10px] font-bold tracking-wide mt-0.5">
                 DE DESCONTO
               </div>
@@ -120,12 +120,9 @@ export function PricingSection() {
             <Flame className="w-4 h-4" /> Preço especial de lançamento
           </div>
 
-          <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-1">
-            R$ 67
+          <div className="font-heading text-6xl md:text-7xl font-bold text-[#B85C43] leading-none mb-4">
+            R$ 97
           </div>
-          <p className="text-slate-500 text-sm mb-5">
-            Você paga na sua moeda local
-          </p>
 
           <p className="text-[#B85C43] font-semibold text-base leading-snug mb-6">
             🔥 Última chance! O preço sobe ao finalizar o contador.
